@@ -18,3 +18,22 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$black: #000;
+$white: #fff;
+
+$yellow-primary: #FDF331;
+$yellow-secondary: #FFFEAB;
+$purple: #7F3E98;
+
+$gray: $black;
+$gray01: lighten($gray, 90%);
+$gray02: lighten($gray, 80%);
+$gray03: lighten($gray, 70%);
+$gray04: lighten($gray, 60%);
+$gray05: lighten($gray, 50%);
+$gray06: lighten($gray, 40%);
+$gray07: lighten($gray, 30%);
+$gray08: lighten($gray, 20%);
+$gray09: lighten($gray, 10%);
+
