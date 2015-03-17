@@ -16,6 +16,9 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'smp' ), 'Seeing More Possibilities', '<a href="http://patricia-lutz.com" rel="designer">Pea</a>' ); ?>
 		</div><!-- .site-info -->
+        <div class="site-credits">
+            <p>Credits</p>
+        </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
