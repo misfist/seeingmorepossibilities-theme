@@ -21,3 +21,91 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin fontFace($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot'); /* IE9 Compat Modes */
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('#{$file-path}.woff') format('woff'), /* Modern Browsers */
+           url('#{$file-path}.ttf') format('truetype'); /* Safari, Android, iOS */
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
+@mixin linear-gradient($direction-start, $direction-stop, $color-start, $color-stop) {
+    background:$color-start;
+    background: -webkit-linear-gradient($color-start, $color-stop);
+    background:    -moz-linear-gradient($color-start, $color-stop);
+    background:         linear-gradient(to $direction-start $direction-stop, $color-start, $color-stop);
+}
+
+@mixin drop-shadow($x: 1px, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+    -webkit-box-shadow: $x $y $blur $spread rgba(204, 204, 204, $alpha);
+    -moz-box-shadow:    $x $y $blur $spread rgba(204, 204, 204, $alpha);
+    box-shadow:         $x $y $blur $spread rgba(204, 204, 204, $alpha);
+}
+
+@mixin drop-shadow-background($x: 1px, $y: 1px, $blur: 2px, $color: $color__gradient-background) {
+    -webkit-filter: drop-shadow($x $y $blur rgba(0,0,0,0.5));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='$x' dy='$y' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')";
+}
+
+@mixin speech-bubble($padding: 5%, $color: $yellow-primary) {
+    position: relative;
+//    width: 250px;
+//    height: 100px;
+    padding: $padding;
+    background: $color;
+    -webkit-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+    -moz-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+    box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+    
+    &:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 75%;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: $color transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    }
+}
+
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+
+/* Reusable column setup */
+
+@mixin col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width: ($one_col * $num) + ($gutter_pc * ($num - 1));
+    border-left-width: $gutter_px;
+    padding: $padding;
+    margin-left: $gutter_pc;
+}
+
+@mixin span_first {
+    margin-left:0;
+}
