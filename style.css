@@ -22,28 +22,39 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
-2.0 Typography
-3.0 Elements
-4.0 Forms
-5.0 Navigation
+2.0 Layout
+3.0 Typography
+4.0 Elements
+5.0 Forms
+6.0 Navigation
 	5.1 Links
 	5.2 Menus
-6.0 Accessibility
-7.0 Alignments
-8.0 Clearings
-9.0 Widgets
-10.0 Content
+7.0 Accessibility
+8.0 Alignments
+9.0 Clearings
+10.0 Widgets
+11.0 Plugins
+    11.1 Event Manager
+12.0 Content
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
-11.0 Infinite scroll
-12.0 Media
+13.0 Infinite scroll
+14.0 Media
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+/* Reusable column setup */
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 /* line 1, sass/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -263,56 +274,297 @@ th {
 /*--------------------------------------------------------------
 2.0 Layout
 --------------------------------------------------------------*/
-/* line 1, sass/layout/_page.scss */
+/*--------------------------------------------------------------
+2.1 Grid
+--------------------------------------------------------------*/
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+/* Reusable column setup */
+/* line 21, sass/layout/_grid.scss */
+.col {
+  border: 0px solid transparent;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important; }
+
+/* 1. 1 Column Grid 0px - 679px 
+----------------------------------------------------------------------------- 
+Span 1:    100%
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  /* line 46, sass/layout/_grid.scss */
+  .col {
+    margin-left: 1%;
+    padding: 0 2%; }
+
+  /* --- Gridpak variables ---*/
+  /* line 57, sass/layout/_grid.scss */
+  .row .col:first-child {
+    margin-left: 0; }
+
+  /* line 61, sass/layout/_grid.scss */
+  .span_1 {
+    margin-left: 0;
+    width: 100%; }
+
+  /* line 76, sass/layout/_grid.scss */
+  #primary,
+  #secondary {
+    border: 0px solid transparent;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    padding: 0 2%;
+    margin-left: 0;
+    width: 100%; } }
+/* 2. 3 Column Grid 680px - Infinity 
+----------------------------------------------------------------------------- 
+Span 1:    32.6666666667%
+Span 2:    66.3333333333%
+Span 3:    100%
+----------------------------------------------------------------------------- */
+@media screen and (min-width: 601px) {
+  /* line 103, sass/layout/_grid.scss */
+  .col {
+    margin-left: 1%;
+    padding: 0 2%; }
+
+  /* --- Gridpak variables ---*/
+  /* line 115, sass/layout/_grid.scss */
+  .row .col:first-child {
+    margin-left: 0; }
+
+  /* line 120, sass/layout/_grid.scss */
+  .span_1 {
+    width: 32.66667%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%; }
+
+  /* line 123, sass/layout/_grid.scss */
+  .span_2 {
+    width: 66.33333%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%; }
+
+  /* line 126, sass/layout/_grid.scss */
+  .span_3 {
+    margin-left: 0;
+    width: 100%; }
+
+  /* line 133, sass/layout/_grid.scss */
+  header#masthead .site-title {
+    border: 0px solid transparent;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 49.5%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%;
+    margin-left: 0; }
+  /* line 138, sass/layout/_grid.scss */
+  header#masthead .site-contact {
+    border: 0px solid transparent;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+    width: 49.5%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%; }
+
+  /* line 148, sass/layout/_grid.scss */
+  #primary,
+  #secondary {
+    border: 0px solid transparent;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important; }
+
+  /* line 153, sass/layout/_grid.scss */
+  #primary {
+    width: 66.33333%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%;
+    margin-left: 0; }
+
+  /* line 158, sass/layout/_grid.scss */
+  #secondary {
+    width: 32.66667%;
+    border-left-width: 0;
+    padding: 0 2%;
+    margin-left: 1%; } }
+/*--------------------------------------------------------------
+2.2 Page
+--------------------------------------------------------------*/
+/* General
+----------------------------------------------- */
+/* line 4, sass/layout/_page.scss */
 #page {
   width: 100%;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 1, sass/layout/_content-sidebar.scss */
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%; }
+/* Colors
+----------------------------------------------- */
+/* line 19, sass/layout/_page.scss */
+#page {
+  background-color: #fff; }
 
-/* line 7, sass/layout/_content-sidebar.scss */
-.site-main {
-  margin: 0 25% 0 0; }
+/* line 24, sass/layout/_page.scss */
+header#masthead .site-description {
+  background-color: #FDF331; }
 
-/* line 11, sass/layout/_content-sidebar.scss */
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%; }
+/* line 31, sass/layout/_page.scss */
+nav#site-navigation {
+  background: #f2f2f2;
+  background: -webkit-linear-gradient(#f2f2f2, #fff);
+  background: -moz-linear-gradient(#f2f2f2, #fff);
+  background: linear-gradient(to top bottom, #f2f2f2, #fff); }
 
-/* line 17, sass/layout/_content-sidebar.scss */
-.site-footer {
-  clear: both;
-  width: 100%; }
+/* line 37, sass/layout/_page.scss */
+#content {
+  padding-left: 3%;
+  padding-right: 3%; }
 
+/*--------------------------------------------------------------
+2.3 Header
+--------------------------------------------------------------*/
+/* line 1, sass/layout/_header.scss */
+header#masthead {
+  position: relative; }
+
+/* line 7, sass/layout/_header.scss */
+.site-description {
+  margin-top: 0;
+  text-align: right;
+  padding-right: 240px; }
+
+/* line 15, sass/layout/_header.scss */
+.vcard {
+  margin-right: 200px;
+  text-align: right;
+  font-family: "Museo";
+  font-weight: 300; }
+  /* line 23, sass/layout/_header.scss */
+  .vcard h3 {
+    margin-bottom: 0; }
+  /* line 27, sass/layout/_header.scss */
+  .vcard .given-name,
+  .vcard .family-name {
+    display: none; }
+  /* line 31, sass/layout/_header.scss */
+  .vcard .title,
+  .vcard .email {
+    display: block; }
+  /* line 35, sass/layout/_header.scss */
+  .vcard .email {
+    font-size: .75rem; }
+  /* line 39, sass/layout/_header.scss */
+  .vcard .site-owner-photo {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='$x' dy='$y' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')"; }
+
+/*--------------------------------------------------------------
+2.3 Footer
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 3.0 Typography
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "KGYouWontBringMeDown";
+  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.eot?#iefix") format("embedded-opentype"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.woff") format("woff"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "KGYouWontBringMeDown";
+  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.eot?#iefix") format("embedded-opentype"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.woff") format("woff"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo";
+  src: url("fonts/museo/Museo500-Regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/museo/Museo500-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo500-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo500-Regular-webfont.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo";
+  src: url("fonts/museo/Museo700-Regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/museo/Museo700-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo700-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo700-Regular-webfont.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo";
+  src: url("fonts/museo/Museo300-Regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/museo/Museo300-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo300-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo300-Regular-webfont.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: normal; }
 /* line 1, sass/typography/_typography.scss */
 body,
 button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  color: #333333;
+  font-family: "Gotham", "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14.4px;
+  font-size: 0.9rem;
   line-height: 1.5; }
 
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
-/* line 11, sass/typography/_headings.scss */
+/* line 5, sass/typography/_headings.scss */
 h1, h2 {
-  font-family: cursive; }
+  font-family: "KGYouWontBringMeDown", script;
+  color: #7F3E98; }
 
 /* line 1, sass/typography/_copy.scss */
 p {
@@ -332,7 +584,7 @@ address {
 
 /* line 17, sass/typography/_copy.scss */
 pre {
-  background: #eee;
+  background: #e6e6e6;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -350,12 +602,12 @@ code, kbd, tt, var {
 
 /* line 33, sass/typography/_copy.scss */
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #666666;
   cursor: help; }
 
 /* line 38, sass/typography/_copy.scss */
 mark, ins {
-  background: #fff9c0;
+  background: #FFFEAB;
   text-decoration: none; }
 
 /* line 43, sass/typography/_copy.scss */
@@ -378,19 +630,12 @@ html {
 
 /* line 11, sass/elements/_elements.scss */
 body {
-  background: #fff;
+  background: #FFFEAB;
   /* Fallback for when there is no custom background color defined. */ }
-
-/* line 15, sass/elements/_elements.scss */
-blockquote, q {
-  quotes: "" ""; }
-  /* line 18, sass/elements/_elements.scss */
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
 
 /* line 24, sass/elements/_elements.scss */
 hr {
-  background-color: #ccc;
+  background-color: gray;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -421,6 +666,12 @@ dt {
 dd {
   margin: 0 1.5em 1.5em; }
 
+/* line 27, sass/elements/_lists.scss */
+aside ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+
 /* line 33, sass/elements/_elements.scss */
 img {
   height: auto;
@@ -437,38 +688,27 @@ table {
 5.0 Forms
 --------------------------------------------------------------*/
 /* line 1, sass/forms/_buttons.scss */
+a.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
+  border-color: #cccccc #cccccc #999999;
+  border: none;
+  background: #FDF331;
+  color: #7F3E98;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  /* line 16, sass/forms/_buttons.scss */
+  padding: .6em 1.5em .6em; }
+  /* line 18, sass/forms/_buttons.scss */
+  a.button:hover,
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  /* line 21, sass/forms/_buttons.scss */
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    border: none; }
 
 /* line 1, sass/forms/_fields.scss */
 input[type="text"],
@@ -477,8 +717,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: #4d4d4d;
+  border: 1px solid #cccccc;
   border-radius: 3px; }
   /* line 11, sass/forms/_fields.scss */
   input[type="text"]:focus,
@@ -487,7 +727,7 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #000; }
 
 /* line 16, sass/forms/_fields.scss */
 input[type="text"],
@@ -510,17 +750,21 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_links.scss */
 a {
-  color: royalblue; }
-  /* line 4, sass/navigation/_links.scss */
+  color: #7F3E98;
+  text-decoration: none;
+  margin-bottom: 2px; }
+  /* line 6, sass/navigation/_links.scss */
   a:visited {
-    color: purple; }
-  /* line 7, sass/navigation/_links.scss */
+    color: #7F3E98; }
+  /* line 9, sass/navigation/_links.scss */
   a:hover, a:focus, a:active {
-    color: midnightblue; }
-  /* line 12, sass/navigation/_links.scss */
+    color: midnightblue;
+    border-bottom: #FDF331 solid 2px;
+    margin-bottom: 0; }
+  /* line 16, sass/navigation/_links.scss */
   a:focus {
     outline: thin dotted; }
-  /* line 15, sass/navigation/_links.scss */
+  /* line 19, sass/navigation/_links.scss */
   a:hover, a:active {
     outline: 0; }
 
@@ -532,13 +776,16 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
-  /* line 7, sass/navigation/_menus.scss */
+  width: 100%;
+  font-family: "Museo";
+  font-weight: 300; }
+  /* line 9, sass/navigation/_menus.scss */
   .main-navigation ul {
     list-style: none;
     margin: 0;
-    padding-left: 0; }
-    /* line 12, sass/navigation/_menus.scss */
+    padding-left: 0;
+    text-align: center; }
+    /* line 15, sass/navigation/_menus.scss */
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -546,55 +793,67 @@ a {
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      /* line 20, sass/navigation/_menus.scss */
+      /* line 23, sass/navigation/_menus.scss */
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      /* line 26, sass/navigation/_menus.scss */
+      /* line 29, sass/navigation/_menus.scss */
       .main-navigation ul ul li:hover > ul {
         left: 100%; }
-      /* line 31, sass/navigation/_menus.scss */
+      /* line 34, sass/navigation/_menus.scss */
       .main-navigation ul ul a {
         width: 200px; }
-    /* line 42, sass/navigation/_menus.scss */
+    /* line 45, sass/navigation/_menus.scss */
     .main-navigation ul li:hover > ul {
       left: auto; }
-  /* line 46, sass/navigation/_menus.scss */
+  /* line 49, sass/navigation/_menus.scss */
   .main-navigation li {
-    float: left;
-    position: relative; }
-  /* line 53, sass/navigation/_menus.scss */
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 5px 20px; }
+    /* line 59, sass/navigation/_menus.scss */
+    .main-navigation li li {
+      text-align: left; }
+  /* line 64, sass/navigation/_menus.scss */
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000; }
+  /* line 70, sass/navigation/_menus.scss */
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a {
+    color: #7F3E98;
+    font-weight: normal; }
 
 /* Small menu. */
-/* line 65, sass/navigation/_menus.scss */
+/* line 79, sass/navigation/_menus.scss */
 .menu-toggle {
   display: none; }
 
 @media screen and (max-width: 600px) {
-  /* line 70, sass/navigation/_menus.scss */
+  /* line 84, sass/navigation/_menus.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
-  /* line 75, sass/navigation/_menus.scss */
+  /* line 89, sass/navigation/_menus.scss */
   .main-navigation ul {
     display: none; } }
-/* line 84, sass/navigation/_menus.scss */
+/* line 98, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
-/* line 89, sass/navigation/_menus.scss */
+/* line 103, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
-/* line 94, sass/navigation/_menus.scss */
+/* line 108, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -615,7 +874,7 @@ a {
   overflow: hidden; }
   /* line 9, sass/modules/_accessibility.scss */
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #e6e6e6;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -699,8 +958,110 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+/* line 15, sass/site/secondary/_widgets.scss */
+.widget_testimonials_widget {
+  padding: 2% 5%; }
+
+/* line 19, sass/site/secondary/_widgets.scss */
+.testimonial-title {
+  display: none; }
+
+/* line 23, sass/site/secondary/_widgets.scss */
+.type-testimonial {
+  background: #FFFEAB;
+  background: -webkit-linear-gradient(#FFFEAB, #fff);
+  background: -moz-linear-gradient(#FFFEAB, #fff);
+  background: linear-gradient(to top bottom, #FFFEAB, #fff); }
+
+/* line 27, sass/site/secondary/_widgets.scss */
+.type-quote {
+  background: #FDF331;
+  position: relative;
+  padding: 5%;
+  background: #FDF331;
+  -webkit-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+  -moz-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+  box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
+  text-align: center; }
+  /* line 67, sass/mixins/_mixins-master.scss */
+  .type-quote:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 75%;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: #FDF331 transparent;
+    display: block;
+    width: 0;
+    z-index: 1; }
+  /* line 33, sass/site/secondary/_widgets.scss */
+  .type-quote blockquote {
+    font-family: 'KGYouWontBringMeDown';
+    font-size: 1.25rem;
+    color: #7F3E98; }
+    /* line 38, sass/site/secondary/_widgets.scss */
+    .type-quote blockquote p {
+      margin-top: .25em;
+      margin-bottom: 0; }
+    /* line 43, sass/site/secondary/_widgets.scss */
+    .type-quote blockquote p:before {
+      content: open-quote; }
+    /* line 46, sass/site/secondary/_widgets.scss */
+    .type-quote blockquote p:after {
+      content: close-quote; }
+  /* line 52, sass/site/secondary/_widgets.scss */
+  .type-quote .meta {
+    line-height: 1; }
+  /* line 56, sass/site/secondary/_widgets.scss */
+  .type-quote cite {
+    font-family: 'Museo';
+    font-style: normal;
+    font-size: 14px;
+    color: #000; }
+    /* line 61, sass/site/secondary/_widgets.scss */
+    .type-quote cite:before {
+      content: '~'; }
+
 /*--------------------------------------------------------------
-11.0 Content
+11.0 Plugins
+--------------------------------------------------------------*/
+/* line 4, sass/plugins/_events-manager.scss */
+h3.event-title a {
+  font-family: "Museo";
+  font-weight: 300; }
+
+/* line 10, sass/plugins/_events-manager.scss */
+h2.event-category-title {
+  font-family: "Museo";
+  font-weight: 300;
+  text-transform: uppercase; }
+
+/* line 17, sass/plugins/_events-manager.scss */
+.events-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+  /* line 24, sass/plugins/_events-manager.scss */
+  .events-list ul, .events-list ol {
+    margin: 0 0 1.5em 3em; }
+  /* line 28, sass/plugins/_events-manager.scss */
+  .events-list ul {
+    list-style: disc; }
+  /* line 32, sass/plugins/_events-manager.scss */
+  .events-list ol {
+    list-style: decimal; }
+  /* line 36, sass/plugins/_events-manager.scss */
+  .events-list li > ul,
+  .events-list li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em; }
+  /* line 42, sass/plugins/_events-manager.scss */
+  .events-list .event-category {
+    text-transform: uppercase; }
+
+/*--------------------------------------------------------------
+12.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 10.1 Posts and pages
@@ -742,6 +1103,10 @@ a {
 .archive .format-aside .entry-title {
   display: none; }
 
+/* line 6, sass/site/primary/_asides.scss */
+blockquote {
+  margin: 0; }
+
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
@@ -754,7 +1119,7 @@ a {
   display: block; }
 
 /*--------------------------------------------------------------
-12.0 Infinite scroll
+13.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 /* line 2, sass/modules/_infinite-scroll.scss */
@@ -769,7 +1134,7 @@ a {
   display: block; }
 
 /*--------------------------------------------------------------
-13.0 Media
+14.0 Media
 --------------------------------------------------------------*/
 /* line 1, sass/media/_media.scss */
 .page-content .wp-smiley,

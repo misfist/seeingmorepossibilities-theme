@@ -11,3 +11,55 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+.widget_testimonials_widget {
+    padding: 2% 5%;
+}
+
+.testimonial-title {
+    display: none;
+}
+
+.type-testimonial {
+    @include linear-gradient(top, bottom, $yellow-secondary, $white);
+}
+
+.type-quote {
+    background: $yellow-primary;
+    @include speech-bubble;
+    
+    text-align: center;
+    
+    blockquote {
+        font-family: 'KGYouWontBringMeDown';
+        font-size: $h3-size;
+        color: $purple;
+        
+        p {
+            margin-top: .25em;
+            margin-bottom: 0;
+        }
+        
+        p:before {
+            content: open-quote;
+        }
+        p:after {
+            content: close-quote;
+        }
+
+    }
+    
+    .meta {
+        line-height: 1;
+    }
+    
+    cite {
+        font-family: 'Museo';
+        font-style: normal;
+        font-size: $font__base-size;
+        color: $color__text;
+        &:before {
+            content: '~';
+        }
+    }
+}

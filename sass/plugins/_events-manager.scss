@@ -1,0 +1,47 @@
+// General
+
+h3.event-title {
+    a {
+        font-family: $font__links;
+        font-weight: 300;
+    }
+}
+
+h2.event-category-title {
+    font-family: $font__links;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+// List View
+.events-list {
+    
+    margin-left: 0;
+    padding-left: 0;
+    
+    list-style: none;
+    
+    ul, ol {
+        margin: 0 0 1.5em 3em;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    li > ul,
+    li > ol {
+        margin-bottom: 0;
+        margin-left: 1.5em;
+    }
+    
+    .event-category {
+        text-transform: uppercase;
+    }
+}
+
+// Detail view

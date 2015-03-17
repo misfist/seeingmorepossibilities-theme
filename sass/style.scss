@@ -23,22 +23,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
-2.0 Typography
-3.0 Elements
-4.0 Forms
-5.0 Navigation
+2.0 Layout
+3.0 Typography
+4.0 Elements
+5.0 Forms
+6.0 Navigation
 	5.1 Links
 	5.2 Menus
-6.0 Accessibility
-7.0 Alignments
-8.0 Clearings
-9.0 Widgets
-10.0 Content
+7.0 Accessibility
+8.0 Alignments
+9.0 Clearings
+10.0 Widgets
+11.0 Plugins
+    11.1 Event Manager
+12.0 Content
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
-11.0 Infinite scroll
-12.0 Media
+13.0 Infinite scroll
+14.0 Media
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
@@ -53,14 +56,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 2.0 Layout
 --------------------------------------------------------------*/
-
-@import "layout/page";
-@import "layout/content-sidebar";
-@import "layout/containers";
+@import "layout/layout";
 
 /*--------------------------------------------------------------
 3.0 Typography
 --------------------------------------------------------------*/
+@import "typography/font-face";
 @import "typography/typography";
 
 /*--------------------------------------------------------------
@@ -99,16 +100,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
-11.0 Content
+11.0 Plugins
+--------------------------------------------------------------*/
+@import "plugins/plugins";
+
+/*--------------------------------------------------------------
+12.0 Content
 --------------------------------------------------------------*/
 @import "site/site";
 
 /*--------------------------------------------------------------
-12.0 Infinite scroll
+13.0 Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
-13.0 Media
+14.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
+
