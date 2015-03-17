@@ -74,6 +74,8 @@ function smp_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+    
+    
 }
 endif; // smp_setup
 add_action( 'after_setup_theme', 'smp_setup' );
@@ -90,9 +92,20 @@ function smp_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
+    
+    register_sidebar( array(
+		'name'          => __( 'Header Widget', 'smp' ),
+		'id'            => 'site-contact',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="site-contact widget %2$s"><div class="vcard">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'smp_widgets_init' );
 
@@ -115,7 +128,7 @@ add_action( 'wp_enqueue_scripts', 'smp_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
