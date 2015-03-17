@@ -26,8 +26,8 @@ function smp_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'smp_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 336,
+		'height'                 => 168,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'smp_header_style',
 		'admin-head-callback'    => 'smp_admin_header_style',
