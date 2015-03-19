@@ -1,0 +1,52 @@
+/* General
+----------------------------------------------- */
+
+#page {
+    width: $size__site-main;
+    max-width: $size__site-main-max;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Colors
+----------------------------------------------- */
+
+body {
+    //background-color: $color__background-body;
+}
+
+#page {
+    background-color: $color__background-page;
+}
+
+header#masthead {
+    .site-description {
+        background-color: $yellow-primary;
+    }
+    .site-title {}
+    .site-contact {}
+}
+
+nav#site-navigation {
+    @include linear-gradient(top, bottom, $color__gradient-start, $white);
+}
+
+.site-main {}
+
+#content {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#primary,
+#secondary {}
+
+#primary {}
+
+#secondary {}
+
+footer#colophon {
+    .site-info {}
+    .site-credits {}
+}
