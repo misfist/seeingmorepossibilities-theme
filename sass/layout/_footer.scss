@@ -1,0 +1,36 @@
+footer#colophon {
+	text-align: center;
+	font-size: $font__size-small;
+	font-family: $museo;
+	color: $purple;
+	
+	ul {
+		padding: 2%;
+		margin: 0;
+		list-style: none;
+		
+		li {
+			display: inline-block;
+			margin-right: .25em;
+		}
+	}
+	
+	.site-info ul {
+		li:not(:last-child):after {
+			margin-left: .5em;
+			content: '-';
+		}
+	}
+	
+	.site-credits ul {
+		li:not(:last-child):after {
+			margin-left: .5em;
+			content: '|';
+		}
+	}
+	
+	.widget {
+		margin: 0;
+	}
+}
+

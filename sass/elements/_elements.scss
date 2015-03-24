@@ -28,6 +28,17 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+figure.alignleft {
+	margin-left: 0;
+}
+
+figcaption,
+figcaption.wp-caption-text {
+	font-family: $museo;
+	font-size: $font__size-small;
+	text-align: right;
+}
+
 @import "lists";
 
 img {

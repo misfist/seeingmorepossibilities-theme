@@ -34,11 +34,12 @@
   }
 }
 
-@mixin linear-gradient($direction-start, $direction-stop, $color-start, $color-stop) {
+@mixin linear-gradient($direction-start, $direction-stop, $color-start, $color-stop, $start-point: 0%, $stop-point: 100%) {
     background:$color-start;
-    background: -webkit-linear-gradient($color-start, $color-stop);
-    background:    -moz-linear-gradient($color-start, $color-stop);
-    background:         linear-gradient(to $direction-start $direction-stop, $color-start, $color-stop);
+    background: -webkit-linear-gradient($color-start $start-point, $color-stop $stop-point);
+    background:    -moz-linear-gradient($color-start $start-point, $color-stop $stop-point);
+    background:         linear-gradient(to $direction-start $direction-stop, $color-start $start-point, $color-stop $stop-point);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-start', endColorstr='$color-stop',GradientType=0 ); /* IE6-9 */
 }
 
 @mixin drop-shadow($x: 1px, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
@@ -65,16 +66,16 @@
     box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
     
     &:after {
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    left: 75%;
-    border-style: solid;
-    border-width: 30px 30px 0 0;
-    border-color: $color transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
+		content: "";
+		position: absolute;
+		bottom: -30px;
+		left: 75%;
+		border-style: solid;
+		border-width: 30px 30px 0 0;
+		border-color: $color transparent;
+		display: block;
+		width: 0;
+		z-index: 1;
     }
 }
 
@@ -108,4 +109,26 @@
 
 @mixin span_first {
     margin-left:0;
+}
+
+// RWD BREAKPOINTS 
+// mobile first! so you only have to use floats etc in larger sizes
+// set breakpoints where your content breaks, not particular devices
+
+@mixin breakpoint($point) {
+	@if $point == xs {
+		@media (min-width: $size__screen-xsmall)  { @content; } 
+	}
+	@if $point == sm {
+		@media (min-width: $size__screen-small) { @content; }
+	}
+	@if $point == md {
+		@media (min-width: $size__screen-medium) { @content; }
+	}
+	@if $point == lg {
+		@media (min-width: $size__screen-large) { @content; }
+	}
+	@else if $point == xl {
+		@media (min-width: $size__screen-xlarge) { @content; }
+	}
 }

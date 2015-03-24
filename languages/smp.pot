@@ -163,7 +163,7 @@ msgid "% Comments"
 msgstr ""
 
 #: inc/template-tags.php:143
-msgid "Category: %s"
+msgid "%s"
 msgstr ""
 
 #: inc/template-tags.php:145

@@ -1,21 +1,43 @@
 header#masthead {
     position: relative;
+	min-height: 176px;
 }
 
-.site-title {}
+.site-branding {
+	min-height: 200px;
+}
+
+.site-title {
+	@media screen and (max-width: $size__screen-small) {
+		text-align: center;
+		transition: all 0.5s ease;
+	}
+}
 
 .site-description {
     margin-top: 0;
     text-align: right;
     padding-right: 240px;
+	
+	@media screen and (max-width: $size__screen-small) {
+		text-align: center;
+		padding-right: 0;
+		transition: all 0.5s ease;
+	}
 }
 
 .site-contact {}
 
 .vcard {
     
-    margin-right: 200px;
+    margin-right: 210px;
     text-align: right;
+	
+	@media screen and (max-width: $size__screen-small) { 
+		margin-right: 0;
+		text-align: center;
+		transition: all 0.5s ease;
+	}
 
     font-family: "Museo";
     font-weight: 300;
@@ -41,9 +63,10 @@ header#masthead {
         top: 0;
         right: 50px;
         @include drop-shadow-background;
+		
+		@media screen and (max-width: $size__screen-small) {
+			display: none;
+		}
     }
 
 }
-
-
-.family-name {}

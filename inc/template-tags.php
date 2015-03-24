@@ -140,7 +140,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'smp' ), single_cat_title( '', false ) );
+		$title = sprintf( __( '%s', 'smp' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
 		$title = sprintf( __( 'Tag: %s', 'smp' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {

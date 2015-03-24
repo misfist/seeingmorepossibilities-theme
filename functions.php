@@ -105,6 +105,26 @@ function smp_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Footer 1', 'smp' ),
+		'id'            => 'footer-1',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="site-copyright widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Footer 2', 'smp' ),
+		'id'            => 'footer-2',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="site-credits widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 
 }
 add_action( 'widgets_init', 'smp_widgets_init' );
@@ -149,3 +169,60 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Custom filters & functions
+ */
+
+// Allow shortcodes to be used in widgets
+add_filter('widget_text', 'do_shortcode');
+
+// Shortcode to display current year
+function display_current_year_shortcode() {
+
+	return date('Y');
+}
+add_shortcode( 'year', 'display_current_year_shortcode' );
+
+// Shortcode to display site name
+function display_site_name_shortcode() {
+
+	return get_bloginfo('name');
+}
+add_shortcode( 'site-name', 'display_site_name_shortcode' );
+
+
+
+// Add the page slug to the main menu items
+
+function add_slug_to_nav_class( $classes, $item ) {
+  if( 'page' == $item->object ){
+    $page = get_post( $item->object_id );
+    $classes[] = $page->post_name;
+  } return
+  $classes;
+}
+add_filter( 'nav_menu_css_class', 'add_slug_to_nav_class', 10, 2 );
+
+// Remove Category: from category heading
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+    return $title;
+
+});

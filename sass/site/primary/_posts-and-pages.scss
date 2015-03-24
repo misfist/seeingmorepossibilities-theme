@@ -6,6 +6,13 @@
 	margin: 0 0 1.5em;
 }
 
+.single .entry-title,
+.archive .entry-title{
+    font-family: $font__links;
+	font-size: $h2-size;
+    font-weight: 300;
+}
+
 .byline,
 .updated:not(.published){
 	display: none;

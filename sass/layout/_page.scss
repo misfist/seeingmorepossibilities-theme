@@ -29,15 +29,16 @@ header#masthead {
 }
 
 nav#site-navigation {
-    @include linear-gradient(top, bottom, $color__gradient-start, $white);
+	background-color: $color__gradient-start;
 }
 
-.site-main {}
-
 #content {
+	@include linear-gradient(top, bottom, $color__gradient-start, $white, 0%, 20%);
     padding-left: 3%;
     padding-right: 3%;
 }
+
+.site-main {}
 
 #primary,
 #secondary {}
@@ -47,6 +48,18 @@ nav#site-navigation {
 #secondary {}
 
 footer#colophon {
-    .site-info {}
+	background-color: $color__background-body;
+	
+    .site-info {
+		background-color: $color__background-page
+	}
     .site-credits {}
+}
+
+
+/* Responsive
+----------------------------------------------- */
+
+@media (max-width: $size__screen-small) { 
+	
 }

@@ -12,12 +12,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'smp' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'smp' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'smp' ), 'Seeing More Possibilities', '<a href="http://patricia-lutz.com" rel="designer">Pea</a>' ); ?>
+			<?php dynamic_sidebar( 'footer-1' ); ?>
 		</div><!-- .site-info -->
         <div class="site-credits">
-            <p>Credits</p>
+            <?php dynamic_sidebar( 'footer-2' ); ?>
         </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
