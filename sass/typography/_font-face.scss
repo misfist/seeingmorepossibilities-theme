@@ -1,5 +1,5 @@
-@include fontFace('KGYouWontBringMeDown', 'fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold', $weight: normal);
-@include fontFace('KGYouWontBringMeDown', 'fonts/kgyouwontbringmedown/KGYouWontBringMeDown', $weight: 300);
+@include fontFace('YouWontBringMeDown', 'fonts/youwontbringmedown/KGYouWontBringMeDown-Bold', $weight: bold);
+@include fontFace('YouWontBringMeDown', 'fonts/youwontbringmedown/YouWontBringMeDown', $weight: normal);
 
 @include fontFace('Museo', 'fonts/museo/Museo500-Regular-webfont', $weight: normal);
 @include fontFace('Museo', 'fonts/museo/Museo700-Regular-webfont', $weight: bold);

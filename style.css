@@ -615,20 +615,20 @@ footer#colophon {
 3.0 Typography
 --------------------------------------------------------------*/
 @font-face {
-  font-family: "KGYouWontBringMeDown";
-  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.eot");
+  font-family: "YouWontBringMeDown";
+  src: url("fonts/youwontbringmedown/KGYouWontBringMeDown-Bold.eot");
   /* IE9 Compat Modes */
-  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.eot?#iefix") format("embedded-opentype"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.woff") format("woff"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDownBold.ttf") format("truetype");
+  src: url("fonts/youwontbringmedown/KGYouWontBringMeDown-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/youwontbringmedown/KGYouWontBringMeDown-Bold.woff") format("woff"), url("fonts/youwontbringmedown/KGYouWontBringMeDown-Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal; }
 @font-face {
-  font-family: "KGYouWontBringMeDown";
-  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.eot");
+  font-family: "YouWontBringMeDown";
+  src: url("fonts/youwontbringmedown/YouWontBringMeDown.eot");
   /* IE9 Compat Modes */
-  src: url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.eot?#iefix") format("embedded-opentype"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.woff") format("woff"), url("fonts/kgyouwontbringmedown/KGYouWontBringMeDown.ttf") format("truetype");
+  src: url("fonts/youwontbringmedown/YouWontBringMeDown.eot?#iefix") format("embedded-opentype"), url("fonts/youwontbringmedown/YouWontBringMeDown.woff") format("woff"), url("fonts/youwontbringmedown/YouWontBringMeDown.ttf") format("truetype");
   /* Safari, Android, iOS */
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "Museo";
@@ -689,7 +689,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 5, sass/typography/_headings.scss */
 h1, h2, h3 {
-  font-family: "KGYouWontBringMeDown", script;
+  font-family: "YouWontBringMeDown", script;
   color: #9552a1; }
 
 /* line 10, sass/typography/_headings.scss */
