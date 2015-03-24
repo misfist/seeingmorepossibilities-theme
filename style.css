@@ -654,6 +654,22 @@ footer#colophon {
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("fonts/gotham/Gotham-Book.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/gotham/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("fonts/gotham/Gotham-Book.woff") format("woff"), url("fonts/gotham/Gotham-Book.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("fonts/gotham/Gotham-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/gotham/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/gotham/Gotham-Bold.woff") format("woff"), url("fonts/gotham/Gotham-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: bold;
+  font-style: normal; }
 /* line 1, sass/typography/_typography.scss */
 body,
 button,
@@ -661,7 +677,7 @@ input,
 select,
 textarea {
   color: #333333;
-  font-family: "Gotham", "Montserrat", sans-serif;
+  font-family: "Gotham", sans-serif;
   font-weight: 400;
   font-size: 14.4px;
   font-size: 0.9rem;
