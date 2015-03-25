@@ -658,7 +658,7 @@ footer#colophon {
   /* IE9 Compat Modes */
   src: url("fonts/museo/Museo500-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo500-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo500-Regular-webfont.ttf") format("truetype");
   /* Safari, Android, iOS */
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: "Museo";
@@ -666,7 +666,7 @@ footer#colophon {
   /* IE9 Compat Modes */
   src: url("fonts/museo/Museo700-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo700-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo700-Regular-webfont.ttf") format("truetype");
   /* Safari, Android, iOS */
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: "Museo";
@@ -674,7 +674,7 @@ footer#colophon {
   /* IE9 Compat Modes */
   src: url("fonts/museo/Museo300-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo/Museo300-Regular-webfont.woff") format("woff"), url("fonts/museo/Museo300-Regular-webfont.ttf") format("truetype");
   /* Safari, Android, iOS */
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "Gotham";
@@ -1235,55 +1235,80 @@ a {
 /*--------------------------------------------------------------
 11.0 Plugins
 --------------------------------------------------------------*/
-/* line 4, sass/plugins/_events-manager.scss */
-h3.event-title a {
+/* line 7, sass/plugins/_events-manager.scss */
+#em-wrapper h3 a {
   font-family: "Museo", sans-serif;
   font-weight: 300; }
-
-/* line 10, sass/plugins/_events-manager.scss */
-h2.event-category-title {
+/* line 13, sass/plugins/_events-manager.scss */
+#em-wrapper h2.event-category-title {
   font-family: "Museo", sans-serif;
   font-weight: 300;
   text-transform: uppercase; }
+/* line 19, sass/plugins/_events-manager.scss */
+#em-wrapper li.event-item {
+  padding-left: 0;
+  text-indent: 0; }
+  /* line 23, sass/plugins/_events-manager.scss */
+  #em-wrapper li.event-item:before {
+    content: none;
+    padding-right: 0; }
 
-/* line 17, sass/plugins/_events-manager.scss */
+/* line 34, sass/plugins/_events-manager.scss */
 .events-list {
   margin-left: 0;
-  padding-left: 0;
-  list-style: none; }
-  /* line 24, sass/plugins/_events-manager.scss */
+  padding-left: 0; }
+  /* line 41, sass/plugins/_events-manager.scss */
   .events-list ul, .events-list ol {
-    margin: 0 0 1.5em 3em; }
-  /* line 28, sass/plugins/_events-manager.scss */
+    margin: 0 0 1.5em 3em;
+    list-style: none; }
+  /* line 46, sass/plugins/_events-manager.scss */
   .events-list ul {
     list-style: disc; }
-  /* line 32, sass/plugins/_events-manager.scss */
+  /* line 50, sass/plugins/_events-manager.scss */
   .events-list ol {
     list-style: decimal; }
-  /* line 36, sass/plugins/_events-manager.scss */
+  /* line 54, sass/plugins/_events-manager.scss */
   .events-list li > ul,
   .events-list li > ol {
     margin-bottom: 0;
     margin-left: 1.5em; }
-  /* line 42, sass/plugins/_events-manager.scss */
+  /* line 60, sass/plugins/_events-manager.scss */
   .events-list .event-category {
     text-transform: uppercase; }
 
-/* line 50, sass/plugins/_events-manager.scss */
+/* line 70, sass/plugins/_events-manager.scss */
 .single-event h1.entry-title {
   font-family: 'Museo'; }
 
-/* line 3, sass/plugins/_form-manager.scss */
+/* line 4, sass/plugins/_form-manager.scss */
 .fm-form ul,
-.fm-form ol {
+.fm-form ol,
+.entry-content .fm-form ul,
+.entry-content .fm-form ol {
   list-style: none;
   margin-left: 0;
   padding-left: 0; }
-/* line 10, sass/plugins/_form-manager.scss */
-.fm-form label {
+  /* line 10, sass/plugins/_form-manager.scss */
+  .fm-form ul li,
+  .fm-form ol li,
+  .entry-content .fm-form ul li,
+  .entry-content .fm-form ol li {
+    padding-left: 0;
+    text-indent: 0; }
+    /* line 14, sass/plugins/_form-manager.scss */
+    .fm-form ul li:before,
+    .fm-form ol li:before,
+    .entry-content .fm-form ul li:before,
+    .entry-content .fm-form ol li:before {
+      content: none;
+      padding-right: 0; }
+/* line 21, sass/plugins/_form-manager.scss */
+.fm-form label,
+.entry-content .fm-form label {
   display: block; }
-/* line 14, sass/plugins/_form-manager.scss */
-.fm-form li:last-child label {
+/* line 25, sass/plugins/_form-manager.scss */
+.fm-form li:last-child label,
+.entry-content .fm-form li:last-child label {
   display: inline; }
 
 /*--------------------------------------------------------------
@@ -1328,24 +1353,27 @@ h2.event-category-title {
   clear: both;
   margin: 0 0 1.5em; }
 
-/* line 39, sass/site/primary/_posts-and-pages.scss */
-.entry-content h3 {
-  clear: none; }
-/* line 43, sass/site/primary/_posts-and-pages.scss */
-.entry-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  /* line 48, sass/site/primary/_posts-and-pages.scss */
-  .entry-content ul li {
-    padding-left: 12px;
-    text-indent: -12px; }
-    /* line 52, sass/site/primary/_posts-and-pages.scss */
-    .entry-content ul li:before {
-      content: "\2022 ";
-      padding-right: 5px;
-      color: #9552a1;
-      /* or whatever color you prefer */ }
+/* line 37, sass/site/primary/_posts-and-pages.scss */
+.entry-content {
+  margin-top: 0; }
+  /* line 42, sass/site/primary/_posts-and-pages.scss */
+  .entry-content h3 {
+    clear: none; }
+  /* line 46, sass/site/primary/_posts-and-pages.scss */
+  .entry-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    /* line 51, sass/site/primary/_posts-and-pages.scss */
+    .entry-content ul li {
+      padding-left: 12px;
+      text-indent: -12px; }
+      /* line 55, sass/site/primary/_posts-and-pages.scss */
+      .entry-content ul li:before {
+        content: "\2022 ";
+        padding-right: 5px;
+        color: #9552a1;
+        /* or whatever color you prefer */ }
 
 /*--------------------------------------------------------------
 10.2 Asides
