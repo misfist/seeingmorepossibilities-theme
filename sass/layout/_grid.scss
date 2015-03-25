@@ -49,10 +49,10 @@ Span 1:    100%
     }
 
     /* --- Gridpak variables ---*/ 
-    $max_columns: 1;
+    $max_columns: 2;
     $padding: 0 2%;
     $gutter_px: 0;
-    $gutter_pc: 1%;
+    $gutter_pc: 0;
 
     .row .col:first-child {
         @include span_first;
@@ -62,27 +62,41 @@ Span 1:    100%
         @include span_first;
         width:100%;
     }
-    
-    header#masthead {
-        .site-description {
-		    @include col;
-			padding: $padding;
-			@include span_first;
-			width:100%;
-		}
+	
+	    header#masthead {
+        .site-description {}
         .site-title {
-		    @include col;
-			padding: $padding;
-			@include span_first;
-			width:100%;
-		}
+            @include col;
+            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+            @include span_first;
+        }
         .site-contact {
-		    @include col;
-			padding: $padding;
-			@include span_first;
-			width:100%;
-		}
+            @include col;
+            @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
     }
+
+    
+//    header#masthead {
+//        .site-description {
+//		    @include col;
+//			padding: $padding;
+//			@include span_first;
+//			width:100%;
+//		}
+//        .site-title {
+//		    @include col;
+//			padding: $padding;
+//			@include span_first;
+//			width:100%;
+//		}
+//        .site-contact {
+//		    @include col;
+//			padding: $padding;
+//			@include span_first;
+//			width:100%;
+//		}
+//    }
 
     nav#site-navigation {}
 
@@ -181,17 +195,17 @@ Span 3:    100%
 }
 
 
-@media (max-width: $size__screen-small) { 
-	.site-title {
-		
-	}
-	
-	.site-contact {}
-	
-	.vcard {
-		
-		.site-owner-photo {
-			display: none;
-		}
-	}
-}
+//@media (max-width: $size__screen-small) { 
+//	.site-title {
+//		
+//	}
+//	
+//	.site-contact {}
+//	
+//	.vcard {
+//		
+//		.site-owner-photo {
+//			display: none;
+//		}
+//	}
+//}

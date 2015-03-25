@@ -1,8 +1,12 @@
 %current {
 	color: $color__link;
 	font-weight: normal;
-	border-bottom: $yellow-primary solid 2px;
-	margin-bottom: 0;
+//	border-bottom: $yellow-primary solid 2px;
+//	margin-bottom: 0;
+	background-image: url('images/underline.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
 }
 
 .main-navigation {
@@ -62,7 +66,7 @@
         display: inline-block;
 		position: relative;
         text-align: center;
-        padding: 5px 20px;
+        padding: 5px 15px;
 
 		&:hover > a {}
         
@@ -75,6 +79,7 @@
 		display: block;
 		text-decoration: none;
         color: $black;
+		padding: 5px;
 	}
 
 	.current_page_item > a,
@@ -82,6 +87,7 @@
 	.current_page_ancestor > a {
 		@extend %current;
 	}
+	
 }
 
 .single-event .workshops-events a {

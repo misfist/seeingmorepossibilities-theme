@@ -2,6 +2,7 @@ a {
 	color: $color__link;
     text-decoration: none;
     margin-bottom: 2px;
+	padding-bottom: 5px;
 
 	&:visited {
 		color: $color__link-visited;
@@ -10,8 +11,9 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
-        border-bottom: $yellow-primary solid 2px;
-        margin-bottom: 0;
+        // border-bottom: $yellow-primary solid 2px;
+		@extend %current;
+		font-weight: normal !important;
 	}
 	&:focus {
 		outline: thin dotted;
