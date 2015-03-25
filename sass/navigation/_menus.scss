@@ -1,8 +1,6 @@
 %current {
 	color: $color__link;
 	font-weight: normal;
-//	border-bottom: $yellow-primary solid 2px;
-//	margin-bottom: 0;
 	background-image: url('images/underline.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -68,7 +66,9 @@
         text-align: center;
         padding: 5px 15px;
 
-		&:hover > a {}
+		&:hover > a {
+			@extend %current;
+		}
         
         li {
             //padding: 5px 0;

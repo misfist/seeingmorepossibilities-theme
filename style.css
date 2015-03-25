@@ -936,10 +936,10 @@ a {
   a:hover, a:focus, a:active {
     color: midnightblue;
     font-weight: normal !important; }
-  /* line 18, sass/navigation/_links.scss */
+  /* line 16, sass/navigation/_links.scss */
   a:focus {
     outline: thin dotted; }
-  /* line 21, sass/navigation/_links.scss */
+  /* line 19, sass/navigation/_links.scss */
   a:hover, a:active {
     outline: 0; }
 
@@ -947,7 +947,7 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_menus.scss */
-a:hover, a:focus, a:active, .main-navigation .current_page_item > a,
+.main-navigation li:hover > a, .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a, .single-event .workshops-events a {
   color: #9552a1;
@@ -957,7 +957,7 @@ a:hover, a:focus, a:active, .main-navigation .current_page_item > a,
   background-position: bottom;
   background-size: contain; }
 
-/* line 12, sass/navigation/_menus.scss */
+/* line 10, sass/navigation/_menus.scss */
 .main-navigation {
   clear: both;
   display: block;
@@ -965,7 +965,7 @@ a:hover, a:focus, a:active, .main-navigation .current_page_item > a,
   width: 100%;
   font-family: "Museo", sans-serif;
   font-weight: 300; }
-  /* line 21, sass/navigation/_menus.scss */
+  /* line 19, sass/navigation/_menus.scss */
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -973,7 +973,7 @@ a:hover, a:focus, a:active, .main-navigation .current_page_item > a,
     margin-right: 5%;
     margin-left: 5%;
     border-bottom: #fff solid 2px; }
-    /* line 30, sass/navigation/_menus.scss */
+    /* line 28, sass/navigation/_menus.scss */
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -981,20 +981,20 @@ a:hover, a:focus, a:active, .main-navigation .current_page_item > a,
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      /* line 38, sass/navigation/_menus.scss */
+      /* line 36, sass/navigation/_menus.scss */
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      /* line 44, sass/navigation/_menus.scss */
+      /* line 42, sass/navigation/_menus.scss */
       .main-navigation ul ul li:hover > ul {
         left: 100%; }
-      /* line 49, sass/navigation/_menus.scss */
+      /* line 47, sass/navigation/_menus.scss */
       .main-navigation ul ul a {
         width: 200px; }
-    /* line 60, sass/navigation/_menus.scss */
+    /* line 58, sass/navigation/_menus.scss */
     .main-navigation ul li:hover > ul {
       left: auto; }
-  /* line 64, sass/navigation/_menus.scss */
+  /* line 62, sass/navigation/_menus.scss */
   .main-navigation li {
     display: inline-block;
     position: relative;
@@ -1327,6 +1327,25 @@ h2.event-category-title {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+/* line 39, sass/site/primary/_posts-and-pages.scss */
+.entry-content h3 {
+  clear: none; }
+/* line 43, sass/site/primary/_posts-and-pages.scss */
+.entry-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  /* line 48, sass/site/primary/_posts-and-pages.scss */
+  .entry-content ul li {
+    padding-left: 12px;
+    text-indent: -12px; }
+    /* line 52, sass/site/primary/_posts-and-pages.scss */
+    .entry-content ul li:before {
+      content: "\2022 ";
+      padding-right: 5px;
+      color: #9552a1;
+      /* or whatever color you prefer */ }
 
 /*--------------------------------------------------------------
 10.2 Asides

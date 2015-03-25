@@ -11,8 +11,6 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
-        // border-bottom: $yellow-primary solid 2px;
-		@extend %current;
 		font-weight: normal !important;
 	}
 	&:focus {

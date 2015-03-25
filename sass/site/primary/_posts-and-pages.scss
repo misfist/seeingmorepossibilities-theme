@@ -33,3 +33,28 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-content {
+	
+	h3 {
+		clear: none;
+	}
+	
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li { 
+			padding-left: 12px; 
+			text-indent: -12px;
+
+			&:before {
+				content: "\2022 ";
+				padding-right: 5px;
+				color: $purple; /* or whatever color you prefer */
+			}
+		}
+	}
+	
+}
