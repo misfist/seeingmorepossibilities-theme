@@ -12,7 +12,7 @@ $gray01: lighten($gray, 90%);
 $gray02: lighten($gray, 80%);
 $gray03: lighten($gray, 70%);
 $gray04: lighten($gray, 60%);
-$gray05: lighten($gray, 50%);
+$gray05: #ccc;
 $gray06: lighten($gray, 40%);
 $gray07: lighten($gray, 30%);
 $gray08: lighten($gray, 20%);
@@ -35,7 +35,7 @@ $color__text-input: $gray07;
 $color__text-input-focus: $black;
 $color__link: $purple;
 $color__link-visited: $purple;
-$color__link-hover: midnightblue;
+$color__link-hover: darken($purple, 10%);
 $color__text-main: $gray08;
 
 $color__border-button: $gray02 $gray02 $gray04;

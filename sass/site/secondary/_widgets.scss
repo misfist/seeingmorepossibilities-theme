@@ -26,6 +26,41 @@
     display: none;
 }
 
+// Social
+.social-links {
+	
+	margin-top: 1em;
+	
+	.textwidget {
+		display: table;
+		height: 40px;
+	}
+	.widget-title {
+		display: table-cell;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0 .5em 0 0;
+		white-space: nowrap;
+	}
+	ul.social-links {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 0;
+		li {
+			display: table-cell;
+			vertical-align: middle;
+
+			img {
+				
+				width: 32px;
+				height: 32px;
+			}
+		}
+
+	}
+
+}
+
 // Testimonials
 .type-testimonial {
 	@include linear-gradient(top, bottom, $yellow-secondary, $white, 0%, 70%);

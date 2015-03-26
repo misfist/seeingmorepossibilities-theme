@@ -2,10 +2,10 @@ footer#colophon {
 	text-align: center;
 	font-size: $font__size-small;
 	font-family: $museo;
-	color: $purple;
+	color: $black;
 	
 	ul {
-		padding: 2%;
+		padding: 1em 2%;
 		margin: 0;
 		list-style: none;
 		
@@ -16,6 +16,16 @@ footer#colophon {
 	}
 	
 	.site-info ul {
+		
+		margin: 0 5%;
+		border-top: 1px solid $gray02;
+		
+		a,
+		a:link {
+			color: $black;
+			padding-bottom: 0;
+		}
+		
 		li:not(:last-child):after {
 			margin-left: .5em;
 			content: '-';
@@ -23,6 +33,13 @@ footer#colophon {
 	}
 	
 	.site-credits ul {
+		color: $purple;
+		a,
+		a:link {
+			border-bottom: 1px solid $purple;
+			padding-bottom: 0;
+		}
+		
 		li:not(:last-child):after {
 			margin-left: .5em;
 			content: '|';

@@ -36,6 +36,9 @@
 
 .entry-content {
 	
+	
+	margin-top: 0;
+	
 	h3 {
 		clear: none;
 	}
@@ -56,5 +59,17 @@
 			}
 		}
 	}
+	
+	p a,
+	p a:link {
+		font-weight: bold;
+		border-bottom: 1px solid $purple;
+		
+		&:hover,
+		&:focus {
+			font-weight: bold;
+		}
+	}
+	
 	
 }

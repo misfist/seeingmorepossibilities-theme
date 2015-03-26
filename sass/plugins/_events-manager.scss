@@ -1,28 +1,74 @@
 // General
 
-h3.event-title {
-    a {
-        font-family: $font__links;
-        font-weight: 300;
-    }
+#em-wrapper,
+.single-event {
+	
+
+	h3 {
+		a {
+			font-family: $font__links;
+		}
+	}
+
+	h2.event-category-title {
+		font-family: $font__links;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	li.event-item {
+		padding-left: 0;
+		text-indent: 0;
+
+		&:before {
+			content: none;
+			padding-right: 0;
+		}
+	}
+	
+	.entry-meta {
+		display: none;
+	}
+	
+	.event-label {
+		font-weight: bold;
+		
+		&:after {
+			content: ': ';
+		}
+	}
+
+
 }
 
-h2.event-category-title {
-    font-family: $font__links;
-    font-weight: 300;
-    text-transform: uppercase;
-}
 
 // List View
 .events-list {
     
     margin-left: 0;
     padding-left: 0;
-    
-    list-style: none;
+	
+	h3, h4 {
+		font-family: $museo;
+		color: $purple;
+		margin: .5em 0;
+	}
+	
+	h3 {
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	
+	h4 {
+		margin-top: 0;
+		font-weight: normal;
+		font-size: $h3-size;
+	}
+
     
     ul, ol {
         margin: 0 0 1.5em 3em;
+		list-style: none;
     }
 
     ul {
@@ -39,16 +85,49 @@ h2.event-category-title {
         margin-left: 1.5em;
     }
     
-    .event-category {
+    .event-category,
+	.event-link {
         text-transform: uppercase;
     }
+	
+	.event-link {
+		font-family: $museo;
+		font-weight: bold;
+	}
+	
+	.event-item:not(:first-child) {
+		margin-top: 5em;
+	}
 }
+
 
 // Detail view
 .single-event {
 	
-	h1.entry-title {
+	h1.entry-title,
+	.event-subtitle {
 		font-family: 'Museo';
 	}
+	
+	h1.entry-title {
+		font-weight: bold;
+	}
+	
+	h2.event-subtitle {
+		font-weight: normal;
+		margin-top: 0;
+	}
+	
+	
+//	h3 {
+//		font-weight: bold;
+//		margin-bottom: 0;
+//	}
+//	
+//	h4 {
+//		margin-top: 0;
+//		font-weight: normal;
+//		font-size: $h3-size;
+//	}
 
 }

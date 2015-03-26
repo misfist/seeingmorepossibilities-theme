@@ -1,8 +1,8 @@
 a {
 	color: $color__link;
     text-decoration: none;
-    margin-bottom: 2px;
-	padding-bottom: 5px;
+//    margin-bottom: 2px;
+//	padding-bottom: 5px;
 
 	&:visited {
 		color: $color__link-visited;
@@ -11,7 +11,6 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
-		font-weight: normal !important;
 	}
 	&:focus {
 		outline: thin dotted;
