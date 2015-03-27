@@ -1367,6 +1367,61 @@ a {
   font-weight: normal;
   margin-top: 0; }
 
+/* line 126, sass/plugins/_events-manager.scss */
+.widget_em_widget h3, .widget_em_widget h4 {
+  font-family: "Museo", sans-serif;
+  color: #9552a1;
+  margin: .5em 0;
+  display: inline; }
+/* line 133, sass/plugins/_events-manager.scss */
+.widget_em_widget h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 1rem; }
+/* line 139, sass/plugins/_events-manager.scss */
+.widget_em_widget h4 {
+  margin-top: 0;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1rem; }
+  /* line 145, sass/plugins/_events-manager.scss */
+  .widget_em_widget h4:before {
+    content: ' - '; }
+    /* line 148, sass/plugins/_events-manager.scss */
+    .widget_em_widget h4:before:empty {
+      content: none; }
+  /* line 153, sass/plugins/_events-manager.scss */
+  .widget_em_widget h4:empty {
+    display: none; }
+    /* line 156, sass/plugins/_events-manager.scss */
+    .widget_em_widget h4:empty:before {
+      content: none; }
+/* line 164, sass/plugins/_events-manager.scss */
+.widget_em_widget .event-subtitle:empty {
+  display: none; }
+/* line 168, sass/plugins/_events-manager.scss */
+.widget_em_widget .event-item:not(:first-child) {
+  margin-top: 2em; }
+/* line 172, sass/plugins/_events-manager.scss */
+.widget_em_widget .event-label {
+  font-weight: bold; }
+  /* line 175, sass/plugins/_events-manager.scss */
+  .widget_em_widget .event-label:after {
+    content: ': '; }
+/* line 180, sass/plugins/_events-manager.scss */
+.widget_em_widget .event-title:before {
+  text-transform: uppercase;
+  font-weight: normal; }
+/* line 185, sass/plugins/_events-manager.scss */
+.widget_em_widget .category-workshops .event-title:before {
+  content: 'Workshop: '; }
+/* line 189, sass/plugins/_events-manager.scss */
+.widget_em_widget .category-programs .event-title:before {
+  content: 'Program: '; }
+/* line 193, sass/plugins/_events-manager.scss */
+.widget_em_widget div:empty {
+  display: none; }
+
 /* line 4, sass/plugins/_form-manager.scss */
 .fm-form ul,
 .fm-form ol,

@@ -117,17 +117,81 @@
 		font-weight: normal;
 		margin-top: 0;
 	}
+
+}
+
+// Widget
+.widget_em_widget {
+
+	h3, h4 {
+		font-family: $museo;
+		color: $purple;
+		margin: .5em 0;
+		display: inline;
+	}
 	
+	h3 {
+		font-weight: bold;
+		margin-bottom: 0;
+		font-size: 1rem;
+	}
 	
-//	h3 {
-//		font-weight: bold;
-//		margin-bottom: 0;
-//	}
-//	
-//	h4 {
-//		margin-top: 0;
-//		font-weight: normal;
-//		font-size: $h3-size;
-//	}
+	h4 {
+		margin-top: 0;
+		font-weight: normal;
+		font-style: italic;
+		font-size: 1rem;
+		
+		&:before {
+			content: ' - ';
+			
+			&:empty {
+				content: none;
+			}
+		}
+		
+		&:empty {
+		   display: none;
+			
+			&:before {
+				content: none;
+			}
+			
+		}
+
+	}
+	
+	.event-subtitle:empty {
+		display: none;
+	}
+	
+	.event-item:not(:first-child) {
+		margin-top: 2em;
+	}
+	
+		.event-label {
+		font-weight: bold;
+		
+		&:after {
+			content: ': ';
+		}
+	}
+	
+	.event-title:before {
+		text-transform: uppercase;
+		font-weight: normal;		
+	}
+	
+	.category-workshops .event-title:before {
+		content: 'Workshop: ';
+	}
+	
+	.category-programs .event-title:before {
+		content: 'Program: ';
+	}
+	
+	div:empty {
+	   display: none;
+	}
 
 }
