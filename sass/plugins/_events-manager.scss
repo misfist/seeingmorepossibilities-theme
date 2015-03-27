@@ -1,7 +1,9 @@
 // General
 
 #em-wrapper,
-.single-event {
+.single-event,
+.workshops,
+.programs {
 	
 
 	h3 {
@@ -38,6 +40,18 @@
 		}
 	}
 
+
+}
+
+// Programs
+.programs,
+.category-programs {
+
+	.event-date,
+	.event-time,
+	.event-location {
+		display: none;
+	}
 
 }
 
@@ -194,4 +208,13 @@
 	   display: none;
 	}
 
+}
+
+// Page navigation
+
+.event-type-programs .main-navigation .programs a {
+	@extend %current;
+}
+.event-type-workshops .main-navigation .workshops a {
+	@extend %current;
 }
