@@ -1,7 +1,7 @@
 %current {
 	color: $color__link;
-	font-weight: normal;
-	background-image: url('images/underline.png');
+	//font-weight: normal;
+	background-image: url('../images/underline.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: contain;
@@ -71,7 +71,6 @@
 		}
         
         li {
-            //padding: 5px 0;
             text-align: left;
         }
 	}
@@ -86,6 +85,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 		@extend %current;
+		font-weight: bold;
 	}
 	
 }

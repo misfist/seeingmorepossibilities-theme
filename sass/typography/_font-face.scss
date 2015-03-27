@@ -1,11 +1,11 @@
-@include fontFace('YouWontBringMeDown', 'fonts/youwontbringmedown/KGYouWontBringMeDown-Bold', $weight: bold);
-@include fontFace('YouWontBringMeDown', 'fonts/youwontbringmedown/YouWontBringMeDown', $weight: normal);
+@include fontFace('YouWontBringMeDown', '../fonts/youwontbringmedown/KGYouWontBringMeDown-Bold', $weight: bold);
+@include fontFace('YouWontBringMeDown', '../fonts/youwontbringmedown/YouWontBringMeDown', $weight: normal);
 
-@include fontFace('Museo', 'fonts/museo/Museo500-Regular-webfont', $weight: bold);
-@include fontFace('Museo', 'fonts/museo/Museo700-Regular-webfont', $weight: 700);
-@include fontFace('Museo', 'fonts/museo/Museo300-Regular-webfont', $weight: normal);
+@include fontFace('Museo', '../fonts/museo/Museo500-Regular-webfont', $weight: bold);
+@include fontFace('Museo', '../fonts/museo/Museo700-Regular-webfont', $weight: 700);
+@include fontFace('Museo', '../fonts/museo/Museo300-Regular-webfont', $weight: normal);
 
-@include fontFace('Gotham', 'fonts/gotham/Gotham-Book', $weight: normal);
-@include fontFace('Gotham', 'fonts/gotham/Gotham-Bold', $weight: bold);
+@include fontFace('Gotham', '../fonts/gotham/Gotham-Book', $weight: normal);
+@include fontFace('Gotham', '../fonts/gotham/Gotham-Bold', $weight: bold);
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);

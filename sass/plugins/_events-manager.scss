@@ -62,21 +62,24 @@
     margin-left: 0;
     padding-left: 0;
 	
-	h3, h4 {
+	h3, h4,
+	.event-title,
+	.event-subtitle	{
 		font-family: $museo;
 		color: $purple;
-		margin: .5em 0;
 	}
 	
 	h3 {
+		margin: .5em 0 0 0;		
+		font-size: 1rem;
 		font-weight: bold;
-		margin-bottom: 0;
 	}
 	
 	h4 {
-		margin-top: 0;
+		margin: 0 0 .5em 0;		
 		font-weight: normal;
-		font-size: $h3-size;
+		font-size: 1rem;
+		font-style: italic;
 	}
 
     
@@ -104,9 +107,17 @@
         text-transform: uppercase;
     }
 	
+	.event-description {
+		p:last-child {
+			margin-bottom: .75em;
+		}
+	}
+	
 	.event-link {
 		font-family: $museo;
 		font-weight: bold;
+		display: inline-block;
+		text-decoration: underline $purple;
 	}
 	
 	.event-item:not(:first-child) {
