@@ -181,9 +181,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-/**
+/****************************
  * Custom filters & functions
- */
+ ****************************/
 
 // Allow shortcodes to be used in widgets
 add_filter('widget_text', 'do_shortcode');
@@ -203,8 +203,7 @@ function display_site_name_shortcode() {
 add_shortcode( 'site-name', 'display_site_name_shortcode' );
 
 
-
-// Add the page slug to the main menu items
+/************* ADD PAGE SLUG TO MENU ITEMS *****************/
 
 function add_slug_to_nav_class( $classes, $item ) {
   if( 'page' == $item->object ){
@@ -236,3 +235,37 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+
+/************* ADD SLUG TO BODY CLASS *****************/
+
+// Add specific CSS class by filter
+add_filter('body_class','add_slug_to_body_class');
+
+function add_slug_to_body_class($classes) {
+	// add 'class-name' to the $classes array
+	global $post; 
+	$post_slug_class = $post->post_name; 
+	$classes[] = $post_slug_class . ' page-' . $post_slug_class;
+
+	return $classes;
+}
+
+/************* ADD TAXONOMY TO BODY CLASS *****************/
+
+add_filter('body_class','add_category_to_body_class');
+
+function add_category_to_body_class($classes = '') {
+	global $post;
+	if( is_singular('post') ) {
+		$category = get_the_category();
+		var_dump($category[0]->slug);
+		$classes[] = 'category-' . $category[0]->slug; 
+	} elseif( is_singular('event') ) {
+		$terms = get_the_terms( $post->ID, 'event-categories' );
+		foreach($terms as $term) {
+			$classes[] = 'event-type-' . $term->slug;
+		}
+	}
+	return $classes;
+}
