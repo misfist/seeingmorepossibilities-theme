@@ -1058,7 +1058,16 @@ a {
     font-size: .75rem; }
     /* line 139, ../sass/navigation/_menus.scss */
     .main-navigation li {
-      padding: 5px 5px; } }
+      padding: 5px 5px; }
+
+  /* line 144, ../sass/navigation/_menus.scss */
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block; }
+
+  /* line 149, ../sass/navigation/_menus.scss */
+  .main-navigation ul {
+    display: none; } }
 /*--------------------------------------------------------------
 7.0 Accessibility
 --------------------------------------------------------------*/
