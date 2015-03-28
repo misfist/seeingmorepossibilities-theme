@@ -1,6 +1,5 @@
 %current {
 	color: $color__link;
-	//font-weight: normal;
 	background-image: url('../images/underline.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -14,15 +13,15 @@
 	width: 100%;
     font-family: $font__nav;
     font-weight: 300;
-	;
 
 	ul {
 		list-style: none;
 		margin: 0;
+		padding-left: 0;
         text-align: center;
 		
-		margin-right: 5%;
-		margin-left: 5%;
+//		margin-right: 5%;
+//		margin-left: 5%;
 		border-bottom: $white solid 2px;
 
 		ul {
@@ -99,16 +98,16 @@
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
+//@media screen and (max-width: 600px) {
+//	.menu-toggle,
+//	.main-navigation.toggled .nav-menu {
+//		display: block;
+//	}
+//
+//	.main-navigation ul {
+//		display: none;
+//	}
+//}
 
 .comment-navigation,
 .posts-navigation,
@@ -128,5 +127,17 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+
+@media screen and (min-width: 0px) and (max-width: $size__screen-small) {
+	.main-navigation {
+		transition: all 0.5s ease;
+		font-size: .75rem;
+		
+		li {
+			padding: 5px 5px;
+		}
 	}
 }

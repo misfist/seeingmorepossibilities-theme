@@ -36,8 +36,7 @@ footer#colophon {
 		color: $purple;
 		a,
 		a:link {
-			border-bottom: 1px solid $purple;
-			padding-bottom: 0;
+			text-decoration: underline $purple;
 		}
 		
 		li:not(:last-child):after {
