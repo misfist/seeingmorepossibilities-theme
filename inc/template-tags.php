@@ -83,8 +83,9 @@ function smp_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'smp' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		_x( '%s', 'post date', 'smp' ),
+		//'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
 	$byline = sprintf(
@@ -92,7 +93,7 @@ function smp_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 
 }
 endif;
@@ -107,7 +108,7 @@ function smp_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'smp' ) );
 		if ( $categories_list && smp_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'smp' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<span class="label">Related Posts in</span> %1$s', 'smp' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */

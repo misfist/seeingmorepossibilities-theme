@@ -5,6 +5,10 @@
 	select {
 		max-width: 100%;
 	}
+	
+	.widget-title {
+		font-size: 1.5rem;
+	}
 }
 
 /* Search widget. */
@@ -134,4 +138,27 @@
             content: '~';
         }
     }
+}
+
+
+// Blog Posts by Category Widget
+
+.widget_smp_widget {
+
+	.widget-title {
+		margin-bottom: .25em;
+	}
+	.category-name {
+		margin: .25em 0;
+	}
+	.post-title {
+		margin: .25em 0;
+		font-family: $museo;
+		font-weight: normal;
+	}
+
+	.category-item:not(:first-child) {
+		margin-top: 2em;
+	}
+
 }

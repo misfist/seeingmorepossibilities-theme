@@ -71,7 +71,13 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'smp' ); ?></p>
 	<?php endif; ?>
+	
+	<?php 
+		$comments_args = array(
+			'title_reply'       => __( 'Leave Your Comment' ),
+		);
+	?>
 
-	<?php comment_form(); ?>
+	<?php comment_form($comments_args); ?>
 
 </div><!-- #comments -->

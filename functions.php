@@ -269,3 +269,5 @@ function add_category_to_body_class($classes = '') {
 	}
 	return $classes;
 }
+
+

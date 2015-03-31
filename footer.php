@@ -22,20 +22,5 @@
 
 <?php wp_footer(); ?>
 
-	<script>
-
-    // Add class to widget that will distinquish between testimonials and quotes
-//	if(document.querySelector('div.category-testimonial')) {
-//		document.querySelector('div.category-testimonial').parentElement.className += ' type-testimonial';
-//	}
-//    if(document.querySelector('div.category-quote')) {
-//		document.querySelector('div.category-quote').parentElement.className += ' type-quote';
-//	}
-    
-	jQuery( "div.category-testimonial" ).parent().addClass( "type-testimonial" );
-	jQuery( "div.category-quote" ).parent().addClass( "type-quote" );
-
-	</script>
-
 </body>
 </html>

@@ -13,9 +13,15 @@
     font-weight: 300;
 }
 
+//html body.single.single-post.postid-103.single-format-standard.logged-in.admin-bar.i-love-to-run.page-i-love-to-run.category-being-active.customize-support div#page.hfeed.site div#content.site-content div#primary.content-area main#main.site-main article#post-103.post-103.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-being-active header.entry-header h1.entry-title
+
 .entry-title,
 .page-title {
 	margin: 1em 0 0 0;
+}
+
+.entry-meta {
+	display: inline;
 }
 
 .byline,
@@ -77,5 +83,30 @@
 		}
 	}
 	
+}
+
+.cat-links {
 	
+	.label {
+		text-transform: uppercase;
+	}
+	a {
+		text-decoration: underline;
+	}
+
+}
+
+.comments-link {
+	display: block;
+	margin-top: 1em;
+	
+	a:before {
+		
+		content: "\f101";
+	}
+	
+}
+
+.comment-reply-title {
+	font-size: 1.5rem;
 }
