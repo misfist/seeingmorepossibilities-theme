@@ -1,6 +1,7 @@
 $museo: 'Museo', sans-serif;
 $gotham: 'Gotham', sans-serif;
 $kg: 'YouWontBringMeDown', script;
+$dashicons: 'dashicons';
 $script: $kg;
 
 $font__main: $gotham;
@@ -32,3 +33,15 @@ $space-34: 18px;
 $space-half: 12px; 
 $space-third: 8px; 
 $space-fourth: 6px; 
+
+%icon-font {
+	
+	&:before {
+		font-family: $dashicons;
+		color: $gray04;
+		font-size: 1.25em;
+		vertical-align: -20%;
+		margin-right: .25em;
+	}
+	
+}

@@ -100,13 +100,28 @@
 	display: block;
 	margin-top: 1em;
 	
-	a:before {
+	a {
+		@extend %icon-font;
 		
-		content: "\f101";
+		&:before {
+			content: "\f101 ";
+		}
 	}
 	
 }
 
 .comment-reply-title {
 	font-size: 1.5rem;
+}
+
+.edit-link {
+	float: right;
+
+	a {
+		@extend %icon-font;
+		
+		&:before {
+			content: "\f464";
+		}
+	}
 }

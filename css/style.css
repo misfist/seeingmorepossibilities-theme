@@ -44,6 +44,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* line 39, ../sass/variables-site/_typography.scss */
+.comments-link a:before, .edit-link a:before {
+  font-family: "dashicons";
+  color: #999999;
+  font-size: 1.25em;
+  vertical-align: -20%;
+  margin-right: .25em; }
+
 /**
  * Gridpak Beta SCSS 
  *
@@ -54,7 +63,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 /* line 1, ../sass/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -1654,13 +1662,20 @@ a {
 .comments-link {
   display: block;
   margin-top: 1em; }
-  /* line 103, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 106, ../sass/site/primary/_posts-and-pages.scss */
   .comments-link a:before {
-    content: "\f101"; }
+    content: "\f101 "; }
 
-/* line 110, ../sass/site/primary/_posts-and-pages.scss */
+/* line 113, ../sass/site/primary/_posts-and-pages.scss */
 .comment-reply-title {
   font-size: 1.5rem; }
+
+/* line 117, ../sass/site/primary/_posts-and-pages.scss */
+.edit-link {
+  float: right; }
+  /* line 123, ../sass/site/primary/_posts-and-pages.scss */
+  .edit-link a:before {
+    content: "\f464"; }
 
 /*--------------------------------------------------------------
 10.2 Asides

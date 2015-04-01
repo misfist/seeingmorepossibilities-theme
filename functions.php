@@ -110,8 +110,18 @@ function smp_widgets_init() {
 		'name'          => __( 'Social Links', 'smp' ),
 		'id'            => 'social-links',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="social-links widget %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<aside id="%1$s" class="social-links widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Archive Links', 'smp' ),
+		'id'            => 'archive-links',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="archives-widget widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -143,7 +153,8 @@ add_action( 'widgets_init', 'smp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function smp_scripts() {
-	wp_enqueue_style( 'smp-style', get_template_directory_uri() . '/css/style.css' );
+	
+	wp_enqueue_style( 'smp-style', get_template_directory_uri() . '/css/style.css', array( 'dashicons' ) );
 
 	wp_enqueue_script( 'smp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
