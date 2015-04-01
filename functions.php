@@ -271,7 +271,7 @@ function add_category_to_body_class($classes = '') {
 	if( is_singular('post') ) {
 		$category = get_the_category();
 		var_dump($category[0]->slug);
-		$classes[] = 'category-' . $category[0]->slug; 
+		$classes[] = 'blog-post category-' . $category[0]->slug; 
 	} elseif( is_singular('event') ) {
 		$terms = get_the_terms( $post->ID, 'event-categories' );
 		foreach($terms as $term) {
