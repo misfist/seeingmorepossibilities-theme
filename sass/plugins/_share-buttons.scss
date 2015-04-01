@@ -7,9 +7,26 @@
 	}
 	
 	
-	a.ssba_email_share img {}
+	a.ssba_email_share  {
+		font-size: .75rem !important;
+		
+		&:after {
+			content: 'Email';
+			color: $black;
+			margin-right: 2em;
+		}
+		
+		img {}
+		
+	}
 	
-	a.ssba_facebook_share img {}
+	a.ssba_facebook_share {
+		
+		img {
+			width: auto !important;
+		}
+		
+	}
 	
 	a.ssba_linkedin_share img {}
 

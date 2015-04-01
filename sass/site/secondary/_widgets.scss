@@ -31,9 +31,11 @@
 }
 
 // Social
-.social-links {
+aside.social-links {
 	
 	margin-top: 1em;
+	border-bottom: 1px solid $gray02;
+	padding-bottom: .7em;
 	
 	.textwidget {
 		display: table;
@@ -162,3 +164,4 @@
 	}
 
 }
+

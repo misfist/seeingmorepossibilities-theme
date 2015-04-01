@@ -89,8 +89,19 @@
 	
 }
 
-.single-event .workshops-events a {
-	@extend %current;
+
+
+// Styles to make correct nav appear active on single pages
+.event-type-workshops .workshops,
+.event-type-programs .programs,
+.single-event .workshops-events,
+.blog-post .blog {
+	
+	a {
+		@extend %current;
+		font-weight: bold;
+	}
+	
 }
 
 /* Small menu. */
