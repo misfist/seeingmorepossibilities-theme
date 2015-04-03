@@ -984,10 +984,10 @@ a {
 /* line 1, ../sass/navigation/_menus.scss */
 .main-navigation li:hover > a, .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a, .event-type-workshops .workshops a,
-.event-type-programs .programs a,
-.single-event .workshops-events a,
-.blog-post .blog a, .event-type-programs .main-navigation .programs a, .event-type-workshops .main-navigation .workshops a {
+.main-navigation .current_page_ancestor > a, .event-type-workshops .workshops > a,
+.event-type-programs .programs > a,
+.single-event .workshops-events > a,
+.blog-post .blog > a, .event-type-programs .main-navigation .programs a, .event-type-workshops .main-navigation .workshops a {
   color: #9552a1;
   background-image: url("../images/underline.png");
   background-repeat: no-repeat;
@@ -1055,10 +1055,10 @@ a {
     font-weight: bold; }
 
 /* line 101, ../sass/navigation/_menus.scss */
-.event-type-workshops .workshops a,
-.event-type-programs .programs a,
-.single-event .workshops-events a,
-.blog-post .blog a {
+.event-type-workshops .workshops > a,
+.event-type-programs .programs > a,
+.single-event .workshops-events > a,
+.blog-post .blog > a {
   font-weight: bold; }
 
 /* Small menu. */

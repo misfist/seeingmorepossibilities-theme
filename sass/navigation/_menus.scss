@@ -98,7 +98,7 @@
 .single-event .workshops-events,
 .blog-post .blog {
 	
-	a {
+	&>a {
 		@extend %current;
 		font-weight: bold;
 	}
