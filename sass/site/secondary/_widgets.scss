@@ -172,3 +172,22 @@ aside.social-links {
 	@include border-top;
 }
 
+.widget_search {
+	
+	.widget-title,
+	.search-form {
+		display: inline-block;
+	}
+	
+	.widget-title {
+		margin: 0 .5em 0 0;
+	}
+	
+	.search-form {}
+	
+	input {
+		background-color: $yellow-secondary;
+	}
+	
+}
+

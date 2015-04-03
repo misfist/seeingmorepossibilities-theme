@@ -1347,6 +1347,17 @@ aside.social-links {
 .widget_archive {
   border-top: 1px solid #cdcdcd; }
 
+/* line 177, ../sass/site/secondary/_widgets.scss */
+.widget_search .widget-title,
+.widget_search .search-form {
+  display: inline-block; }
+/* line 182, ../sass/site/secondary/_widgets.scss */
+.widget_search .widget-title {
+  margin: 0 .5em 0 0; }
+/* line 188, ../sass/site/secondary/_widgets.scss */
+.widget_search input {
+  background-color: #fffbbc; }
+
 /*--------------------------------------------------------------
 11.0 Plugins
 --------------------------------------------------------------*/
