@@ -1361,200 +1361,224 @@ aside.social-links {
 /*--------------------------------------------------------------
 11.0 Plugins
 --------------------------------------------------------------*/
-/* line 10, ../sass/plugins/_events-manager.scss */
+/* line 11, ../sass/plugins/_events-manager.scss */
 #em-wrapper h3 a,
 .single-event h3 a,
 .workshops h3 a,
-.programs h3 a {
+.programs h3 a,
+.programs-workshops h3 a {
   font-family: "Museo", sans-serif; }
-/* line 15, ../sass/plugins/_events-manager.scss */
+/* line 16, ../sass/plugins/_events-manager.scss */
 #em-wrapper h2.event-category-title,
 .single-event h2.event-category-title,
 .workshops h2.event-category-title,
-.programs h2.event-category-title {
+.programs h2.event-category-title,
+.programs-workshops h2.event-category-title {
   font-family: "Museo", sans-serif;
   font-weight: 300;
   text-transform: uppercase; }
-/* line 21, ../sass/plugins/_events-manager.scss */
+/* line 22, ../sass/plugins/_events-manager.scss */
 #em-wrapper li.event-item,
 .single-event li.event-item,
 .workshops li.event-item,
-.programs li.event-item {
+.programs li.event-item,
+.programs-workshops li.event-item {
   padding-left: 0;
   text-indent: 0; }
-  /* line 25, ../sass/plugins/_events-manager.scss */
+  /* line 26, ../sass/plugins/_events-manager.scss */
   #em-wrapper li.event-item:before,
   .single-event li.event-item:before,
   .workshops li.event-item:before,
-  .programs li.event-item:before {
+  .programs li.event-item:before,
+  .programs-workshops li.event-item:before {
     content: none;
     padding-right: 0; }
-/* line 31, ../sass/plugins/_events-manager.scss */
+/* line 32, ../sass/plugins/_events-manager.scss */
 #em-wrapper .entry-meta,
 .single-event .entry-meta,
 .workshops .entry-meta,
-.programs .entry-meta {
+.programs .entry-meta,
+.programs-workshops .entry-meta {
   display: none; }
-/* line 35, ../sass/plugins/_events-manager.scss */
+/* line 36, ../sass/plugins/_events-manager.scss */
 #em-wrapper .event-label,
 .single-event .event-label,
 .workshops .event-label,
-.programs .event-label {
+.programs .event-label,
+.programs-workshops .event-label {
   font-weight: bold; }
-  /* line 38, ../sass/plugins/_events-manager.scss */
+  /* line 39, ../sass/plugins/_events-manager.scss */
   #em-wrapper .event-label:after,
   .single-event .event-label:after,
   .workshops .event-label:after,
-  .programs .event-label:after {
+  .programs .event-label:after,
+  .programs-workshops .event-label:after {
     content: ': '; }
 
-/* line 50, ../sass/plugins/_events-manager.scss */
+/* line 53, ../sass/plugins/_events-manager.scss */
 .programs .event-date,
 .programs .event-time,
 .programs .event-location,
 .category-programs .event-date,
 .category-programs .event-time,
-.category-programs .event-location {
+.category-programs .event-location,
+.event-type-programs .event-date,
+.event-type-programs .event-time,
+.event-type-programs .event-location {
   display: none; }
 
-/* line 59, ../sass/plugins/_events-manager.scss */
+/* line 62, ../sass/plugins/_events-manager.scss */
 .events-list {
   margin-left: 0;
   padding-left: 0; }
-  /* line 64, ../sass/plugins/_events-manager.scss */
+  /* line 67, ../sass/plugins/_events-manager.scss */
   .events-list h3, .events-list h4,
   .events-list .event-title,
   .events-list .event-subtitle {
     font-family: "Museo", sans-serif;
     color: #9552a1; }
-  /* line 71, ../sass/plugins/_events-manager.scss */
+  /* line 74, ../sass/plugins/_events-manager.scss */
   .events-list h3 {
     margin: .5em 0 0 0;
     font-size: 1rem;
     font-weight: bold; }
-  /* line 77, ../sass/plugins/_events-manager.scss */
+  /* line 80, ../sass/plugins/_events-manager.scss */
   .events-list h4 {
     margin: 0 0 .5em 0;
     font-weight: normal;
     font-size: 1rem;
     font-style: italic; }
-  /* line 85, ../sass/plugins/_events-manager.scss */
+  /* line 87, ../sass/plugins/_events-manager.scss */
+  .events-list .workshops-heading {
+    margin-top: 1.2em; }
+  /* line 91, ../sass/plugins/_events-manager.scss */
+  .events-list .event-item {
+    padding-left: 0;
+    text-indent: 0; }
+    /* line 96, ../sass/plugins/_events-manager.scss */
+    .events-list .event-item:before {
+      content: none; }
+  /* line 102, ../sass/plugins/_events-manager.scss */
   .events-list ul, .events-list ol {
     margin: 0 0 1.5em 3em;
     list-style: none; }
-  /* line 90, ../sass/plugins/_events-manager.scss */
+  /* line 107, ../sass/plugins/_events-manager.scss */
   .events-list ul {
     list-style: disc; }
-  /* line 94, ../sass/plugins/_events-manager.scss */
+  /* line 111, ../sass/plugins/_events-manager.scss */
   .events-list ol {
     list-style: decimal; }
-  /* line 98, ../sass/plugins/_events-manager.scss */
+  /* line 115, ../sass/plugins/_events-manager.scss */
   .events-list li > ul,
   .events-list li > ol {
     margin-bottom: 0;
     margin-left: 1.5em; }
-  /* line 104, ../sass/plugins/_events-manager.scss */
+  /* line 121, ../sass/plugins/_events-manager.scss */
   .events-list .event-category,
   .events-list .event-link {
     text-transform: uppercase; }
-  /* line 110, ../sass/plugins/_events-manager.scss */
+  /* line 127, ../sass/plugins/_events-manager.scss */
   .events-list .event-description p:last-child {
     margin-bottom: .75em; }
-  /* line 115, ../sass/plugins/_events-manager.scss */
+  /* line 132, ../sass/plugins/_events-manager.scss */
   .events-list .event-link {
     font-family: "Museo", sans-serif;
     font-weight: bold;
     display: inline-block;
     text-decoration: underline #9552a1; }
-  /* line 122, ../sass/plugins/_events-manager.scss */
+  /* line 139, ../sass/plugins/_events-manager.scss */
   .events-list .event-item:not(:first-child) {
     margin-top: 4.5em; }
 
-/* line 127, ../sass/plugins/_events-manager.scss */
+/* line 144, ../sass/plugins/_events-manager.scss */
+.programs-workshops .workshops-heading {
+  margin-top: 2.5em; }
+
+/* line 148, ../sass/plugins/_events-manager.scss */
 h1.past-events-title {
   margin-top: 2.5em; }
 
-/* line 133, ../sass/plugins/_events-manager.scss */
+/* line 154, ../sass/plugins/_events-manager.scss */
 .past-events-list h2 {
   font-family: "Museo", sans-serif;
   font-size: 1rem; }
-/* line 137, ../sass/plugins/_events-manager.scss */
+/* line 158, ../sass/plugins/_events-manager.scss */
 .past-events-list p {
   display: none; }
-/* line 140, ../sass/plugins/_events-manager.scss */
+/* line 161, ../sass/plugins/_events-manager.scss */
 .past-events-list .event-item {
   margin-top: 1.25em !important; }
-  /* line 144, ../sass/plugins/_events-manager.scss */
+  /* line 165, ../sass/plugins/_events-manager.scss */
   .past-events-list .event-item p {
     display: inherit; }
 
-/* line 155, ../sass/plugins/_events-manager.scss */
+/* line 176, ../sass/plugins/_events-manager.scss */
 .single-event h1.entry-title,
 .single-event .event-subtitle {
   font-family: 'Museo'; }
-/* line 160, ../sass/plugins/_events-manager.scss */
+/* line 181, ../sass/plugins/_events-manager.scss */
 .single-event h1.entry-title {
   font-weight: bold; }
-/* line 164, ../sass/plugins/_events-manager.scss */
+/* line 185, ../sass/plugins/_events-manager.scss */
 .single-event h2.event-subtitle {
   font-weight: normal;
   margin-top: 0; }
-/* line 170, ../sass/plugins/_events-manager.scss */
+/* line 191, ../sass/plugins/_events-manager.scss */
 .single-event .ssba {
   display: none !important; }
 
-/* line 178, ../sass/plugins/_events-manager.scss */
+/* line 199, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h3, .widget_em_widget h4 {
   font-family: "Museo", sans-serif;
   color: #9552a1;
   margin: .5em 0;
   display: inline; }
-/* line 185, ../sass/plugins/_events-manager.scss */
+/* line 206, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h3 {
   font-weight: bold;
   margin-bottom: 0;
   font-size: 1rem; }
-/* line 191, ../sass/plugins/_events-manager.scss */
+/* line 212, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h4 {
   margin-top: 0;
   font-weight: normal;
   font-style: italic;
   font-size: 1rem; }
-  /* line 197, ../sass/plugins/_events-manager.scss */
+  /* line 218, ../sass/plugins/_events-manager.scss */
   .widget_em_widget h4:before {
     content: ' - '; }
-    /* line 200, ../sass/plugins/_events-manager.scss */
+    /* line 221, ../sass/plugins/_events-manager.scss */
     .widget_em_widget h4:before:empty {
       content: none; }
-  /* line 205, ../sass/plugins/_events-manager.scss */
+  /* line 226, ../sass/plugins/_events-manager.scss */
   .widget_em_widget h4:empty {
     display: none; }
-    /* line 208, ../sass/plugins/_events-manager.scss */
+    /* line 229, ../sass/plugins/_events-manager.scss */
     .widget_em_widget h4:empty:before {
       content: none; }
-/* line 216, ../sass/plugins/_events-manager.scss */
+/* line 237, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-subtitle:empty {
   display: none; }
-/* line 220, ../sass/plugins/_events-manager.scss */
+/* line 241, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-item:not(:first-child) {
   margin-top: 2em; }
-/* line 224, ../sass/plugins/_events-manager.scss */
+/* line 245, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-label {
   font-weight: bold; }
-  /* line 227, ../sass/plugins/_events-manager.scss */
+  /* line 248, ../sass/plugins/_events-manager.scss */
   .widget_em_widget .event-label:after {
     content: ': '; }
-/* line 232, ../sass/plugins/_events-manager.scss */
+/* line 253, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-title:before {
   text-transform: uppercase;
   font-weight: normal; }
-/* line 237, ../sass/plugins/_events-manager.scss */
+/* line 258, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .category-workshops .event-title:before {
   content: 'Workshop: '; }
-/* line 241, ../sass/plugins/_events-manager.scss */
+/* line 262, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .category-programs .event-title:before {
   content: 'Program: '; }
-/* line 245, ../sass/plugins/_events-manager.scss */
+/* line 266, ../sass/plugins/_events-manager.scss */
 .widget_em_widget div:empty {
   display: none; }
 

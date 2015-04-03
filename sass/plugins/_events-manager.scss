@@ -3,7 +3,8 @@
 #em-wrapper,
 .single-event,
 .workshops,
-.programs {
+.programs,
+.programs-workshops {
 	
 
 	h3 {
@@ -43,9 +44,11 @@
 
 }
 
+
 // Programs
 .programs,
-.category-programs {
+.category-programs,
+.event-type-programs {
 
 	.event-date,
 	.event-time,
@@ -81,6 +84,20 @@
 		font-style: italic;
 	}
 
+	.workshops-heading {
+		margin-top: 1.2em;
+	}
+	
+	.event-item {
+		
+		padding-left: 0; 
+		text-indent: 0;
+		
+		&:before {
+			content: none;
+		}
+	
+	}
     
     ul, ol {
         margin: 0 0 1.5em 3em;
@@ -122,6 +139,10 @@
 	.event-item:not(:first-child) {
 		margin-top: 4.5em;
 	}
+}
+
+.programs-workshops .workshops-heading {
+	margin-top: 2.5em;
 }
 
 h1.past-events-title {
