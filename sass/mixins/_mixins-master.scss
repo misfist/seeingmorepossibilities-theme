@@ -22,6 +22,10 @@
 	clear: both;
 }
 
+@mixin border-top($width: 1px, $style: solid, $color: $gray02) {
+	border-top: $width $style $color;
+}
+
 @mixin border-bottom($width: 1px, $style: solid, $color: $gray02) {
 	border-bottom: $width $style $color;
 }

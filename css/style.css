@@ -1287,7 +1287,7 @@ aside.social-links {
   -moz-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
   box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
   text-align: center; }
-  /* line 72, ../sass/mixins/_mixins-master.scss */
+  /* line 76, ../sass/mixins/_mixins-master.scss */
   .type-quote:after {
     content: "";
     position: absolute;
@@ -1342,6 +1342,10 @@ aside.social-links {
 /* line 165, ../sass/site/secondary/_widgets.scss */
 .widget_smp_widget .category-item:not(:first-child) {
   margin-top: 2em; }
+
+/* line 171, ../sass/site/secondary/_widgets.scss */
+.widget_archive {
+  border-top: 1px solid #cdcdcd; }
 
 /*--------------------------------------------------------------
 11.0 Plugins
