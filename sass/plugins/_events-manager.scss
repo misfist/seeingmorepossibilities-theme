@@ -270,10 +270,18 @@ h1.past-events-title {
 }
 
 // Page navigation
-
 .event-type-programs .main-navigation .programs a {
 	@extend %current;
 }
 .event-type-workshops .main-navigation .workshops a {
 	@extend %current;
+}
+
+// Reservation form
+
+.em-booking-message {
+	border: 1px solid $purple;
+	background-color: $purple-secondary;
+	border-radius: 4px;
+	padding: 1em .75em;
 }

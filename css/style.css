@@ -1582,6 +1582,13 @@ h1.past-events-title {
 .widget_em_widget div:empty {
   display: none; }
 
+/* line 282, ../sass/plugins/_events-manager.scss */
+.em-booking-message {
+  border: 1px solid #9552a1;
+  background-color: #FDF0FE;
+  border-radius: 4px;
+  padding: 1em .75em; }
+
 /* line 4, ../sass/plugins/_form-manager.scss */
 .fm-form ul,
 .fm-form ol,
