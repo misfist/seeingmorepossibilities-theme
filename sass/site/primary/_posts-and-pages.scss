@@ -13,8 +13,6 @@
     font-weight: 300;
 }
 
-//html body.single.single-post.postid-103.single-format-standard.logged-in.admin-bar.i-love-to-run.page-i-love-to-run.category-being-active.customize-support div#page.hfeed.site div#content.site-content div#primary.content-area main#main.site-main article#post-103.post-103.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-being-active header.entry-header h1.entry-title
-
 .entry-title,
 .page-title {
 	margin: 1em 0 0 0;
@@ -77,7 +75,7 @@
 	p a,
 	p a:link {
 		font-weight: bold;
-		border-bottom: 1px solid $purple;
+		text-decoration: underline;
 		
 		&:hover,
 		&:focus {
@@ -96,6 +94,10 @@
 		text-decoration: underline;
 	}
 
+}
+
+.tags-links {
+	display: none;
 }
 
 .comments-link {
@@ -126,4 +128,14 @@
 			content: "\f464";
 		}
 	}
+}
+
+// Post Listing (Blog)
+.blog .site-main {
+	
+	&>article:not(:last-child) {
+		padding-bottom: 2em;
+		@include border-bottom;
+	}
+	
 }

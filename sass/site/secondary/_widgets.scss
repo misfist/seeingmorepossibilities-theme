@@ -34,7 +34,7 @@
 aside.social-links {
 	
 	margin-top: 1em;
-	border-bottom: 1px solid $gray02;
+	@include border-bottom;
 	padding-bottom: .7em;
 	
 	.textwidget {
@@ -70,7 +70,8 @@ aside.social-links {
 // Testimonials
 .type-testimonial {
 	@include linear-gradient(top, bottom, $yellow-secondary, $white, 0%, 70%);
-	border-bottom: $gray02 solid 1px;
+	@include border-bottom;
+	padding-bottom: 1.2em;
 	font-family: 'Museo';
 	
 	.widget-title {}
@@ -102,6 +103,8 @@ aside.social-links {
 // Quotes
 .type-quote {
     background: $yellow-primary;
+	margin-bottom: 3.2em;
+	
     @include speech-bubble;
     
     text-align: center;

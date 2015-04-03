@@ -55,7 +55,6 @@
 
 }
 
-
 // List View
 .events-list {
     
@@ -121,8 +120,32 @@
 	}
 	
 	.event-item:not(:first-child) {
-		margin-top: 5em;
+		margin-top: 4.5em;
 	}
+}
+
+h1.past-events-title {
+	margin-top: 2.5em;
+}
+
+.past-events-list {
+	
+	h2 {
+		font-family: $museo;
+		font-size: 1rem;
+	}
+	p {
+		display: none;
+	}
+	.event-item {
+		
+		margin-top: 1.25em !important;
+
+		p {
+			display: inherit;
+		}
+	}
+	
 }
 
 
@@ -143,6 +166,10 @@
 		margin-top: 0;
 	}
 
+	// Hide share
+	.ssba {
+		display: none !important;
+	}
 }
 
 // Widget

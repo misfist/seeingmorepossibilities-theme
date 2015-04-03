@@ -522,79 +522,93 @@ header#masthead {
   /* line 15, ../sass/layout/_header.scss */
   header#masthead .site-branding {
     min-height: 216px; } }
-@media screen and (max-width: 680px) {
-  /* line 21, ../sass/layout/_header.scss */
-  header#masthead .site-title {
-    transition: all 0.5s ease;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 0; }
-    /* line 29, ../sass/layout/_header.scss */
-    header#masthead .site-title img {
-      width: 100%;
-      height: auto; } }
-/* line 36, ../sass/layout/_header.scss */
-header#masthead .site-title a,
-header#masthead .site-title a:link,
-header#masthead .site-title a:hover {
-  background-image: none; }
-/* line 43, ../sass/layout/_header.scss */
+/* line 21, ../sass/layout/_header.scss */
+header#masthead .site-title {
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media screen and (max-width: 680px) {
+    /* line 21, ../sass/layout/_header.scss */
+    header#masthead .site-title {
+      transition: all 0.5s ease;
+      padding-right: 0; }
+      /* line 30, ../sass/layout/_header.scss */
+      header#masthead .site-title img {
+        width: 100%;
+        height: auto; } }
+  /* line 37, ../sass/layout/_header.scss */
+  header#masthead .site-title a,
+  header#masthead .site-title a:link,
+  header#masthead .site-title a:hover {
+    background-image: none; }
+/* line 44, ../sass/layout/_header.scss */
 header#masthead .site-description {
   margin-top: 0;
   text-align: right;
   padding-right: 240px; }
   @media screen and (max-width: 680px) {
-    /* line 43, ../sass/layout/_header.scss */
+    /* line 44, ../sass/layout/_header.scss */
     header#masthead .site-description {
       transition: all 0.5s ease;
       padding-right: 104px;
       font-size: .9rem;
       white-space: nowrap; } }
 @media screen and (max-width: 680px) {
-  /* line 56, ../sass/layout/_header.scss */
+  /* line 57, ../sass/layout/_header.scss */
   header#masthead .site-contact {
     padding-left: 0; } }
-/* line 62, ../sass/layout/_header.scss */
+/* line 63, ../sass/layout/_header.scss */
 header#masthead .vcard {
   margin-right: 210px;
   text-align: right;
-  font-family: "Museo";
-  font-weight: 300; }
-  /* line 70, ../sass/layout/_header.scss */
-  header#masthead .vcard h3 {
-    margin-bottom: 0; }
-  /* line 74, ../sass/layout/_header.scss */
+  font-family: "Museo", sans-serif;
+  font-weight: normal; }
+  /* line 71, ../sass/layout/_header.scss */
+  header#masthead .vcard .site-owner {
+    margin-bottom: 0;
+    font-family: "Museo", sans-serif;
+    font-weight: normal; }
+    /* line 76, ../sass/layout/_header.scss */
+    header#masthead .vcard .site-owner .fn,
+    header#masthead .vcard .site-owner .honorific-suffix {
+      color: #010101; }
+    /* line 81, ../sass/layout/_header.scss */
+    header#masthead .vcard .site-owner .fn:after {
+      content: ', '; }
+  /* line 86, ../sass/layout/_header.scss */
   header#masthead .vcard .given-name,
   header#masthead .vcard .family-name {
     display: none; }
-  /* line 78, ../sass/layout/_header.scss */
+  /* line 90, ../sass/layout/_header.scss */
   header#masthead .vcard .title,
   header#masthead .vcard .email {
     display: block; }
-  /* line 82, ../sass/layout/_header.scss */
+  /* line 95, ../sass/layout/_header.scss */
+  header#masthead .vcard .title {
+    color: #9552a1; }
+  /* line 99, ../sass/layout/_header.scss */
   header#masthead .vcard .email {
     font-size: .75rem; }
+    /* line 101, ../sass/layout/_header.scss */
+    header#masthead .vcard .email a {
+      color: #010101; }
   @media screen and (max-width: 680px) {
-    /* line 62, ../sass/layout/_header.scss */
+    /* line 63, ../sass/layout/_header.scss */
     header#masthead .vcard {
       transition: all 0.5s ease;
       margin-right: 104px; }
-      /* line 90, ../sass/layout/_header.scss */
+      /* line 110, ../sass/layout/_header.scss */
       header#masthead .vcard h3 {
         margin-top: 0;
-        font-family: "Museo", sans-serif;
-        font-weight: 300;
-        font-size: 70%;
-        color: #010101; }
-      /* line 98, ../sass/layout/_header.scss */
+        font-size: .8rem; }
+      /* line 118, ../sass/layout/_header.scss */
       header#masthead .vcard .title {
         font-size: .6rem;
         color: #9552a1;
         white-space: nowrap; }
-      /* line 104, ../sass/layout/_header.scss */
+      /* line 124, ../sass/layout/_header.scss */
       header#masthead .vcard .email {
         display: none; } }
-  /* line 109, ../sass/layout/_header.scss */
+  /* line 129, ../sass/layout/_header.scss */
   header#masthead .vcard .site-owner-photo {
     position: absolute;
     top: 0;
@@ -605,7 +619,7 @@ header#masthead .vcard {
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=$x, OffY=$y, Color='$color')"; }
     @media screen and (max-width: 680px) {
-      /* line 109, ../sass/layout/_header.scss */
+      /* line 129, ../sass/layout/_header.scss */
       header#masthead .vcard .site-owner-photo {
         transition: all 0.5s ease;
         right: 10px;
@@ -987,15 +1001,18 @@ a {
   float: left;
   width: 100%;
   font-family: "Museo", sans-serif;
-  font-weight: 300; }
-  /* line 17, ../sass/navigation/_menus.scss */
+  font-weight: normal;
+  font-size: .95rem; }
+  /* line 18, ../sass/navigation/_menus.scss */
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
     text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
     border-bottom: #fff solid 2px; }
-    /* line 27, ../sass/navigation/_menus.scss */
+    /* line 28, ../sass/navigation/_menus.scss */
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -1003,41 +1020,41 @@ a {
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      /* line 35, ../sass/navigation/_menus.scss */
+      /* line 36, ../sass/navigation/_menus.scss */
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      /* line 41, ../sass/navigation/_menus.scss */
+      /* line 42, ../sass/navigation/_menus.scss */
       .main-navigation ul ul li:hover > ul {
         left: 100%; }
-      /* line 46, ../sass/navigation/_menus.scss */
+      /* line 47, ../sass/navigation/_menus.scss */
       .main-navigation ul ul a {
         width: 200px; }
-    /* line 57, ../sass/navigation/_menus.scss */
+    /* line 58, ../sass/navigation/_menus.scss */
     .main-navigation ul li:hover > ul {
       left: auto; }
-  /* line 61, ../sass/navigation/_menus.scss */
+  /* line 62, ../sass/navigation/_menus.scss */
   .main-navigation li {
     display: inline-block;
     position: relative;
     text-align: center;
-    padding: 5px 15px; }
-    /* line 72, ../sass/navigation/_menus.scss */
+    padding: 5px 17px; }
+    /* line 73, ../sass/navigation/_menus.scss */
     .main-navigation li li {
       text-align: left; }
-  /* line 76, ../sass/navigation/_menus.scss */
+  /* line 77, ../sass/navigation/_menus.scss */
   .main-navigation a {
     display: block;
     text-decoration: none;
     color: #010101;
     padding: 5px; }
-  /* line 83, ../sass/navigation/_menus.scss */
+  /* line 84, ../sass/navigation/_menus.scss */
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
     font-weight: bold; }
 
-/* line 100, ../sass/navigation/_menus.scss */
+/* line 101, ../sass/navigation/_menus.scss */
 .event-type-workshops .workshops a,
 .event-type-programs .programs a,
 .single-event .workshops-events a,
@@ -1045,23 +1062,23 @@ a {
   font-weight: bold; }
 
 /* Small menu. */
-/* line 108, ../sass/navigation/_menus.scss */
+/* line 109, ../sass/navigation/_menus.scss */
 .menu-toggle {
   display: none; }
 
-/* line 127, ../sass/navigation/_menus.scss */
+/* line 128, ../sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
-/* line 132, ../sass/navigation/_menus.scss */
+/* line 133, ../sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
-/* line 137, ../sass/navigation/_menus.scss */
+/* line 138, ../sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -1070,20 +1087,20 @@ a {
   width: 50%; }
 
 @media screen and (min-width: 0px) and (max-width: 680px) {
-  /* line 146, ../sass/navigation/_menus.scss */
+  /* line 147, ../sass/navigation/_menus.scss */
   .main-navigation {
     transition: all 0.5s ease;
     font-size: .75rem; }
-    /* line 150, ../sass/navigation/_menus.scss */
+    /* line 151, ../sass/navigation/_menus.scss */
     .main-navigation li {
       padding: 5px 5px; }
 
-  /* line 155, ../sass/navigation/_menus.scss */
+  /* line 156, ../sass/navigation/_menus.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
-  /* line 160, ../sass/navigation/_menus.scss */
+  /* line 161, ../sass/navigation/_menus.scss */
   .main-navigation ul {
     display: none; } }
 /*--------------------------------------------------------------
@@ -1239,28 +1256,30 @@ aside.social-links {
   background: linear-gradient(to top bottom, #fffbbc 0%, #fff 70%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-start', endColorstr='$color-stop',GradientType=0 );
   /* IE6-9 */
-  border-bottom: #cdcdcd solid 1px;
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 1.2em;
   font-family: 'Museo'; }
-  /* line 79, ../sass/site/secondary/_widgets.scss */
+  /* line 80, ../sass/site/secondary/_widgets.scss */
   .type-testimonial cite {
     color: #9552a1;
     margin-left: 30%;
     font-style: normal; }
-    /* line 85, ../sass/site/secondary/_widgets.scss */
+    /* line 86, ../sass/site/secondary/_widgets.scss */
     .type-testimonial cite.testimonial-client-name {
       display: block;
       font-size: 13pt; }
-      /* line 89, ../sass/site/secondary/_widgets.scss */
+      /* line 90, ../sass/site/secondary/_widgets.scss */
       .type-testimonial cite.testimonial-client-name:before {
         content: '~'; }
-    /* line 93, ../sass/site/secondary/_widgets.scss */
+    /* line 94, ../sass/site/secondary/_widgets.scss */
     .type-testimonial cite.testimonial-client-title {
       display: block;
       font-size: 10pt; }
 
-/* line 103, ../sass/site/secondary/_widgets.scss */
+/* line 104, ../sass/site/secondary/_widgets.scss */
 .type-quote {
   background: #fdf430;
+  margin-bottom: 3.2em;
   position: relative;
   padding: 5%;
   background: #fdf430;
@@ -1268,7 +1287,7 @@ aside.social-links {
   -moz-box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
   box-shadow: 3px 3px 6px 0px rgba(204, 204, 204, 0.9);
   text-align: center; }
-  /* line 68, ../sass/mixins/_mixins-master.scss */
+  /* line 72, ../sass/mixins/_mixins-master.scss */
   .type-quote:after {
     content: "";
     position: absolute;
@@ -1280,47 +1299,47 @@ aside.social-links {
     display: block;
     width: 0;
     z-index: 1; }
-  /* line 109, ../sass/site/secondary/_widgets.scss */
+  /* line 112, ../sass/site/secondary/_widgets.scss */
   .type-quote blockquote {
     font-family: 'YouWontBringMeDown';
     font-size: 24px;
     font-weight: bold;
     color: #9552a1; }
-    /* line 115, ../sass/site/secondary/_widgets.scss */
+    /* line 118, ../sass/site/secondary/_widgets.scss */
     .type-quote blockquote p {
       margin-top: .25em;
       margin-bottom: 0; }
-    /* line 120, ../sass/site/secondary/_widgets.scss */
+    /* line 123, ../sass/site/secondary/_widgets.scss */
     .type-quote blockquote p:before {
       content: open-quote; }
-    /* line 123, ../sass/site/secondary/_widgets.scss */
+    /* line 126, ../sass/site/secondary/_widgets.scss */
     .type-quote blockquote p:after {
       content: close-quote; }
-  /* line 129, ../sass/site/secondary/_widgets.scss */
+  /* line 132, ../sass/site/secondary/_widgets.scss */
   .type-quote .meta {
     line-height: 1; }
-  /* line 133, ../sass/site/secondary/_widgets.scss */
+  /* line 136, ../sass/site/secondary/_widgets.scss */
   .type-quote cite {
     font-family: 'Museo';
     font-style: normal;
     font-size: 12px;
     color: #010101; }
-    /* line 139, ../sass/site/secondary/_widgets.scss */
+    /* line 142, ../sass/site/secondary/_widgets.scss */
     .type-quote cite:before {
       content: '~'; }
 
-/* line 150, ../sass/site/secondary/_widgets.scss */
+/* line 153, ../sass/site/secondary/_widgets.scss */
 .widget_smp_widget .widget-title {
   margin-bottom: .25em; }
-/* line 153, ../sass/site/secondary/_widgets.scss */
+/* line 156, ../sass/site/secondary/_widgets.scss */
 .widget_smp_widget .category-name {
   margin: .25em 0; }
-/* line 156, ../sass/site/secondary/_widgets.scss */
+/* line 159, ../sass/site/secondary/_widgets.scss */
 .widget_smp_widget .post-title {
   margin: .25em 0;
   font-family: "Museo", sans-serif;
   font-weight: normal; }
-/* line 162, ../sass/site/secondary/_widgets.scss */
+/* line 165, ../sass/site/secondary/_widgets.scss */
 .widget_smp_widget .category-item:not(:first-child) {
   margin-top: 2em; }
 
@@ -1383,123 +1402,144 @@ aside.social-links {
 .category-programs .event-location {
   display: none; }
 
-/* line 60, ../sass/plugins/_events-manager.scss */
+/* line 59, ../sass/plugins/_events-manager.scss */
 .events-list {
   margin-left: 0;
   padding-left: 0; }
-  /* line 65, ../sass/plugins/_events-manager.scss */
+  /* line 64, ../sass/plugins/_events-manager.scss */
   .events-list h3, .events-list h4,
   .events-list .event-title,
   .events-list .event-subtitle {
     font-family: "Museo", sans-serif;
     color: #9552a1; }
-  /* line 72, ../sass/plugins/_events-manager.scss */
+  /* line 71, ../sass/plugins/_events-manager.scss */
   .events-list h3 {
     margin: .5em 0 0 0;
     font-size: 1rem;
     font-weight: bold; }
-  /* line 78, ../sass/plugins/_events-manager.scss */
+  /* line 77, ../sass/plugins/_events-manager.scss */
   .events-list h4 {
     margin: 0 0 .5em 0;
     font-weight: normal;
     font-size: 1rem;
     font-style: italic; }
-  /* line 86, ../sass/plugins/_events-manager.scss */
+  /* line 85, ../sass/plugins/_events-manager.scss */
   .events-list ul, .events-list ol {
     margin: 0 0 1.5em 3em;
     list-style: none; }
-  /* line 91, ../sass/plugins/_events-manager.scss */
+  /* line 90, ../sass/plugins/_events-manager.scss */
   .events-list ul {
     list-style: disc; }
-  /* line 95, ../sass/plugins/_events-manager.scss */
+  /* line 94, ../sass/plugins/_events-manager.scss */
   .events-list ol {
     list-style: decimal; }
-  /* line 99, ../sass/plugins/_events-manager.scss */
+  /* line 98, ../sass/plugins/_events-manager.scss */
   .events-list li > ul,
   .events-list li > ol {
     margin-bottom: 0;
     margin-left: 1.5em; }
-  /* line 105, ../sass/plugins/_events-manager.scss */
+  /* line 104, ../sass/plugins/_events-manager.scss */
   .events-list .event-category,
   .events-list .event-link {
     text-transform: uppercase; }
-  /* line 111, ../sass/plugins/_events-manager.scss */
+  /* line 110, ../sass/plugins/_events-manager.scss */
   .events-list .event-description p:last-child {
     margin-bottom: .75em; }
-  /* line 116, ../sass/plugins/_events-manager.scss */
+  /* line 115, ../sass/plugins/_events-manager.scss */
   .events-list .event-link {
     font-family: "Museo", sans-serif;
     font-weight: bold;
     display: inline-block;
     text-decoration: underline #9552a1; }
-  /* line 123, ../sass/plugins/_events-manager.scss */
+  /* line 122, ../sass/plugins/_events-manager.scss */
   .events-list .event-item:not(:first-child) {
-    margin-top: 5em; }
+    margin-top: 4.5em; }
 
-/* line 132, ../sass/plugins/_events-manager.scss */
+/* line 127, ../sass/plugins/_events-manager.scss */
+h1.past-events-title {
+  margin-top: 2.5em; }
+
+/* line 133, ../sass/plugins/_events-manager.scss */
+.past-events-list h2 {
+  font-family: "Museo", sans-serif;
+  font-size: 1rem; }
+/* line 137, ../sass/plugins/_events-manager.scss */
+.past-events-list p {
+  display: none; }
+/* line 140, ../sass/plugins/_events-manager.scss */
+.past-events-list .event-item {
+  margin-top: 1.25em !important; }
+  /* line 144, ../sass/plugins/_events-manager.scss */
+  .past-events-list .event-item p {
+    display: inherit; }
+
+/* line 155, ../sass/plugins/_events-manager.scss */
 .single-event h1.entry-title,
 .single-event .event-subtitle {
   font-family: 'Museo'; }
-/* line 137, ../sass/plugins/_events-manager.scss */
+/* line 160, ../sass/plugins/_events-manager.scss */
 .single-event h1.entry-title {
   font-weight: bold; }
-/* line 141, ../sass/plugins/_events-manager.scss */
+/* line 164, ../sass/plugins/_events-manager.scss */
 .single-event h2.event-subtitle {
   font-weight: normal;
   margin-top: 0; }
+/* line 170, ../sass/plugins/_events-manager.scss */
+.single-event .ssba {
+  display: none !important; }
 
-/* line 151, ../sass/plugins/_events-manager.scss */
+/* line 178, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h3, .widget_em_widget h4 {
   font-family: "Museo", sans-serif;
   color: #9552a1;
   margin: .5em 0;
   display: inline; }
-/* line 158, ../sass/plugins/_events-manager.scss */
+/* line 185, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h3 {
   font-weight: bold;
   margin-bottom: 0;
   font-size: 1rem; }
-/* line 164, ../sass/plugins/_events-manager.scss */
+/* line 191, ../sass/plugins/_events-manager.scss */
 .widget_em_widget h4 {
   margin-top: 0;
   font-weight: normal;
   font-style: italic;
   font-size: 1rem; }
-  /* line 170, ../sass/plugins/_events-manager.scss */
+  /* line 197, ../sass/plugins/_events-manager.scss */
   .widget_em_widget h4:before {
     content: ' - '; }
-    /* line 173, ../sass/plugins/_events-manager.scss */
+    /* line 200, ../sass/plugins/_events-manager.scss */
     .widget_em_widget h4:before:empty {
       content: none; }
-  /* line 178, ../sass/plugins/_events-manager.scss */
+  /* line 205, ../sass/plugins/_events-manager.scss */
   .widget_em_widget h4:empty {
     display: none; }
-    /* line 181, ../sass/plugins/_events-manager.scss */
+    /* line 208, ../sass/plugins/_events-manager.scss */
     .widget_em_widget h4:empty:before {
       content: none; }
-/* line 189, ../sass/plugins/_events-manager.scss */
+/* line 216, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-subtitle:empty {
   display: none; }
-/* line 193, ../sass/plugins/_events-manager.scss */
+/* line 220, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-item:not(:first-child) {
   margin-top: 2em; }
-/* line 197, ../sass/plugins/_events-manager.scss */
+/* line 224, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-label {
   font-weight: bold; }
-  /* line 200, ../sass/plugins/_events-manager.scss */
+  /* line 227, ../sass/plugins/_events-manager.scss */
   .widget_em_widget .event-label:after {
     content: ': '; }
-/* line 205, ../sass/plugins/_events-manager.scss */
+/* line 232, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .event-title:before {
   text-transform: uppercase;
   font-weight: normal; }
-/* line 210, ../sass/plugins/_events-manager.scss */
+/* line 237, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .category-workshops .event-title:before {
   content: 'Workshop: '; }
-/* line 214, ../sass/plugins/_events-manager.scss */
+/* line 241, ../sass/plugins/_events-manager.scss */
 .widget_em_widget .category-programs .event-title:before {
   content: 'Program: '; }
-/* line 218, ../sass/plugins/_events-manager.scss */
+/* line 245, ../sass/plugins/_events-manager.scss */
 .widget_em_widget div:empty {
   display: none; }
 
@@ -1612,95 +1652,104 @@ aside.social-links {
   font-size: 1.25rem;
   font-weight: 300; }
 
-/* line 18, ../sass/site/primary/_posts-and-pages.scss */
+/* line 16, ../sass/site/primary/_posts-and-pages.scss */
 .entry-title,
 .page-title {
   margin: 1em 0 0 0; }
 
-/* line 23, ../sass/site/primary/_posts-and-pages.scss */
+/* line 21, ../sass/site/primary/_posts-and-pages.scss */
 .entry-meta {
   display: inline;
   margin-right: 2em;
   font-size: .75rem; }
 
-/* line 29, ../sass/site/primary/_posts-and-pages.scss */
+/* line 27, ../sass/site/primary/_posts-and-pages.scss */
 .byline,
 .updated:not(.published) {
   display: none; }
 
-/* line 34, ../sass/site/primary/_posts-and-pages.scss */
+/* line 32, ../sass/site/primary/_posts-and-pages.scss */
 .single .byline,
 .group-blog .byline {
   display: inline; }
 
-/* line 39, ../sass/site/primary/_posts-and-pages.scss */
+/* line 37, ../sass/site/primary/_posts-and-pages.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.25em 0 0; }
 
-/* line 45, ../sass/site/primary/_posts-and-pages.scss */
+/* line 43, ../sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
 
-/* line 52, ../sass/site/primary/_posts-and-pages.scss */
+/* line 50, ../sass/site/primary/_posts-and-pages.scss */
 .entry-content h3 {
   clear: none; }
-/* line 56, ../sass/site/primary/_posts-and-pages.scss */
+/* line 54, ../sass/site/primary/_posts-and-pages.scss */
 .entry-content ul {
   list-style: none;
   padding: 0;
   margin: 0; }
-  /* line 61, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 59, ../sass/site/primary/_posts-and-pages.scss */
   .entry-content ul li {
     padding-left: 12px;
     text-indent: -12px; }
-    /* line 65, ../sass/site/primary/_posts-and-pages.scss */
+    /* line 63, ../sass/site/primary/_posts-and-pages.scss */
     .entry-content ul li:before {
       content: "\2022 ";
       padding-right: 5px;
       color: #9552a1;
       /* or whatever color you prefer */ }
-/* line 73, ../sass/site/primary/_posts-and-pages.scss */
+/* line 71, ../sass/site/primary/_posts-and-pages.scss */
 .entry-content p:first-child {
   margin-top: 0; }
-/* line 77, ../sass/site/primary/_posts-and-pages.scss */
+/* line 75, ../sass/site/primary/_posts-and-pages.scss */
 .entry-content p a,
 .entry-content p a:link {
   font-weight: bold;
-  border-bottom: 1px solid #9552a1; }
-  /* line 82, ../sass/site/primary/_posts-and-pages.scss */
+  text-decoration: underline; }
+  /* line 80, ../sass/site/primary/_posts-and-pages.scss */
   .entry-content p a:hover, .entry-content p a:focus,
   .entry-content p a:link:hover,
   .entry-content p a:link:focus {
     font-weight: bold; }
 
-/* line 92, ../sass/site/primary/_posts-and-pages.scss */
+/* line 90, ../sass/site/primary/_posts-and-pages.scss */
 .cat-links .label {
   text-transform: uppercase; }
-/* line 95, ../sass/site/primary/_posts-and-pages.scss */
+/* line 93, ../sass/site/primary/_posts-and-pages.scss */
 .cat-links a {
   text-decoration: underline; }
 
-/* line 101, ../sass/site/primary/_posts-and-pages.scss */
+/* line 99, ../sass/site/primary/_posts-and-pages.scss */
+.tags-links {
+  display: none; }
+
+/* line 103, ../sass/site/primary/_posts-and-pages.scss */
 .comments-link {
   display: block;
   margin-top: 1em; }
-  /* line 108, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 110, ../sass/site/primary/_posts-and-pages.scss */
   .comments-link a:before {
     content: "\f101 "; }
 
-/* line 115, ../sass/site/primary/_posts-and-pages.scss */
+/* line 117, ../sass/site/primary/_posts-and-pages.scss */
 .comment-reply-title {
   font-size: 1.5rem; }
 
-/* line 119, ../sass/site/primary/_posts-and-pages.scss */
+/* line 121, ../sass/site/primary/_posts-and-pages.scss */
 .edit-link {
   float: right; }
-  /* line 125, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 127, ../sass/site/primary/_posts-and-pages.scss */
   .edit-link a:before {
     content: "\f464"; }
+
+/* line 136, ../sass/site/primary/_posts-and-pages.scss */
+.blog .site-main > article:not(:last-child) {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #cdcdcd; }
 
 /*--------------------------------------------------------------
 10.2 Asides

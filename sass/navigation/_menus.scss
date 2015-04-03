@@ -12,7 +12,8 @@
 	float: left;
 	width: 100%;
     font-family: $font__nav;
-    font-weight: 300;
+    font-weight: normal;
+	font-size: .95rem;
 
 	ul {
 		list-style: none;
@@ -20,8 +21,8 @@
 		padding-left: 0;
         text-align: center;
 		
-//		margin-right: 5%;
-//		margin-left: 5%;
+		margin-right: 5%;
+		margin-left: 5%;
 		border-bottom: $white solid 2px;
 
 		ul {
@@ -63,7 +64,7 @@
         display: inline-block;
 		position: relative;
         text-align: center;
-        padding: 5px 15px;
+        padding: 5px 17px;
 
 		&:hover > a {
 			@extend %current;
