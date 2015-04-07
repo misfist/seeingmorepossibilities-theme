@@ -74,6 +74,8 @@ function smp_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	
+	add_editor_style( 'css/editor-style.css' );
     
     
 }
