@@ -45,7 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.2 Galleries
 --------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-/* line 39, ../sass/variables-site/_typography.scss */
+/* line 40, ../sass/variables-site/_typography.scss */
 .comments-link a:before, .edit-link a:before {
   font-family: "dashicons";
   color: #9a9a9a;
@@ -1850,6 +1850,27 @@ blockquote {
 /* line 4, ../sass/site/primary/_comments.scss */
 .bypostauthor {
   display: block; }
+
+/*--------------------------------------------------------------
+10.4 Coming Soon Page
+--------------------------------------------------------------*/
+/* line 1, ../sass/site/_coming-soon.scss */
+#primary.coming-soon {
+  float: none;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center; }
+  /* line 10, ../sass/site/_coming-soon.scss */
+  #primary.coming-soon main {
+    margin-top: 150px; }
+  /* line 13, ../sass/site/_coming-soon.scss */
+  #primary.coming-soon main * {
+    color: #9552a1;
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; }
+  /* line 22, ../sass/site/_coming-soon.scss */
+  #primary.coming-soon main h2 {
+    font-size: 2rem; }
 
 /*--------------------------------------------------------------
 13.0 Infinite scroll
