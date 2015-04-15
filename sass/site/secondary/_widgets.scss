@@ -108,6 +108,10 @@ aside.social-links {
     @include speech-bubble;
     
     text-align: center;
+	
+	.widget-title {
+		display: none;
+	}
     
     blockquote {
         font-family: 'YouWontBringMeDown';
