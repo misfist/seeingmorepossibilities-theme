@@ -8,17 +8,22 @@
 
 wp_head(); ?>
 
-<div id="primary" class="content-area coming-soon">
-	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+<body class="page-coming-soon">
+	
+	<div id="primary" class="content-area coming-soon">
+		<main id="main" class="site-main" role="main">
 
-			<?php the_content(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php endwhile; // end of the loop. ?>
+				<?php the_content(); ?>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+			<?php endwhile; // end of the loop. ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	
+</body>
 
 <?php wp_footer(); ?>
 
