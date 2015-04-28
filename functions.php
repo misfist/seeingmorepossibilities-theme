@@ -168,6 +168,13 @@ function smp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'smp_scripts' );
 
+/************* ADD FAVICON *****************/
+
+function smp_favicon() {
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('stylesheet_directory').'/favicon.ico" />' . "\n";
+}
+add_action('wp_head', 'smp_favicon');
+
 /**
  * Implement the Custom Header feature.
  */
